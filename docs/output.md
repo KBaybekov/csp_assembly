@@ -1,4 +1,4 @@
-# kbaybekov/csp_assembly: Output
+# csp/assembly: Output
 
 ## Introduction
 

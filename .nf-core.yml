@@ -33,9 +33,9 @@ lint:
     - .prettierignore
     - .prettierignore
     - CODE_OF_CONDUCT.md
-    - assets/nf-core-csp_assembly_logo_light.png
-    - docs/images/nf-core-csp_assembly_logo_light.png
-    - docs/images/nf-core-csp_assembly_logo_dark.png
+    - assets/nf-core-assembly_logo_light.png
+    - docs/images/nf-core-assembly_logo_light.png
+    - docs/images/nf-core-assembly_logo_dark.png
     - .github/ISSUE_TEMPLATE/bug_report.yml
     - .github/CONTRIBUTING.md
     - .github/PULL_REQUEST_TEMPLATE.md
@@ -72,9 +72,9 @@ lint:
     - assets/sendmail_template.txt
     - assets/email_template.txt
     - CODE_OF_CONDUCT.md
-    - assets/nf-core-csp_assembly_logo_light.png
-    - docs/images/nf-core-csp_assembly_logo_light.png
-    - docs/images/nf-core-csp_assembly_logo_dark.png
+    - assets/nf-core-assembly_logo_light.png
+    - docs/images/nf-core-assembly_logo_light.png
+    - docs/images/nf-core-assembly_logo_dark.png
     - .github/ISSUE_TEMPLATE/config.yml
     - .github/workflows/awstest.yml
     - .github/workflows/awsfulltest.yml
@@ -83,8 +83,8 @@ lint:
     - nextflow_badge
 
 template:
-  org: kbaybekov
-  name: csp_assembly
+  org: csp
+  name: assembly
   description: Pipeline for hybrid assembling, written for CSP
   author: Kirill Baybekov
   version: 1.0.0dev

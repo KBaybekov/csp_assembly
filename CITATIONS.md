@@ -1,4 +1,4 @@
-# kbaybekov/csp_assembly: Citations
+# csp/assembly: Citations
 
 ## [nf-core](https://pubmed.ncbi.nlm.nih.gov/32055031/)
 

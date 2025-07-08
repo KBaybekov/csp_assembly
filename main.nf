@@ -1,9 +1,9 @@
 #!/usr/bin/env nextflow
 /*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    kbaybekov/csp_assembly
+    csp/assembly
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Github : https://github.com/kbaybekov/csp_assembly
+    Github : https://github.com/csp/assembly
 ----------------------------------------------------------------------------------------
 */
 
@@ -13,9 +13,9 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
 
-include { CSP_ASSEMBLY  } from './workflows/csp_assembly'
-include { PIPELINE_INITIALISATION } from './subworkflows/local/utils_nfcore_csp_assembly_pipeline'
-include { PIPELINE_COMPLETION     } from './subworkflows/local/utils_nfcore_csp_assembly_pipeline'
+include { ASSEMBLY  } from './workflows/assembly'
+include { PIPELINE_INITIALISATION } from './subworkflows/local/utils_nfcore_assembly_pipeline'
+include { PIPELINE_COMPLETION     } from './subworkflows/local/utils_nfcore_assembly_pipeline'
 /*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     NAMED WORKFLOWS FOR PIPELINE
@@ -24,23 +24,6 @@ include { PIPELINE_COMPLETION     } from './subworkflows/local/utils_nfcore_csp_
 
 //
 // WORKFLOW: Run main analysis pipeline depending on type of input
-//
-workflow KBAYBEKOV_CSP_ASSEMBLY {
-
-    take:
-    samplesheet // channel: samplesheet read in from --input
-
-    main:
-
-    //
-    // WORKFLOW: Run pipeline
-    //
-    CSP_ASSEMBLY (
-        samplesheet
-    )
-    emit:
-    multiqc_report = CSP_ASSEMBLY.out.multiqc_report // channel: /path/to/multiqc_report.html
-}
 /*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     RUN MAIN WORKFLOW
@@ -65,7 +48,7 @@ workflow {
     //
     // WORKFLOW: Run main workflow
     //
-    KBAYBEKOV_CSP_ASSEMBLY (
+    ASSEMBLY (
         PIPELINE_INITIALISATION.out.samplesheet
     )
     //
@@ -74,7 +57,7 @@ workflow {
     PIPELINE_COMPLETION (
         params.outdir,
         params.monochrome_logs,
-        KBAYBEKOV_CSP_ASSEMBLY.out.multiqc_report
+        ASSEMBLY.out.multiqc_report
     )
 }
 

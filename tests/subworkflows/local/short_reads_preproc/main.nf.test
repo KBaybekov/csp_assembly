@@ -1,0 +1,29 @@
+nextflow_workflow {
+
+    name "Test Workflow SHORT_READS_PREPROC"
+    script "subworkflows/local/short_reads_preproc/main.nf"
+    workflow "SHORT_READS_PREPROC"
+
+    test("Should run without failures") {
+
+        when {
+            params {
+                // define parameters here. Example:
+                // outdir = "tests/results"
+            }
+            workflow {
+                """
+                // define inputs of the workflow here. Example:
+                // input[0] = file("test-file.txt")
+                """
+            }
+        }
+
+        then {
+            assert workflow.success
+            assert snapshot(workflow.out).match()
+        }
+
+    }
+
+}

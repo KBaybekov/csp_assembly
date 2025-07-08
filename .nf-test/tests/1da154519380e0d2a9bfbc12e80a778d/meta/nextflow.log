@@ -1,0 +1,205 @@
+Jul-08 17:30:11.097 [main] DEBUG nextflow.cli.Launcher - $> nextflow -quiet -log /raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/1da154519380e0d2a9bfbc12e80a778d/meta/nextflow.log run /raid/kbajbekov/common_share/github/csp_assembly/main.nf -c /raid/kbajbekov/common_share/github/csp_assembly/nextflow.config -c /raid/kbajbekov/common_share/github/csp_assembly/tests/nextflow.config -params-file /raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/1da154519380e0d2a9bfbc12e80a778d/meta/params.json -ansi-log false -profile test_full -with-trace /raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/1da154519380e0d2a9bfbc12e80a778d/meta/trace.csv -w /raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/1da154519380e0d2a9bfbc12e80a778d/work
+Jul-08 17:30:11.182 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.6
+Jul-08 17:30:11.204 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/PAK-CSPMZ/kbajbekov/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.1,nf-k8s@1.0.0,nf-tower@1.11.4,nf-wave@1.12.1
+Jul-08 17:30:11.234 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jul-08 17:30:11.235 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jul-08 17:30:11.238 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Jul-08 17:30:11.249 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jul-08 17:30:11.270 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /raid/kbajbekov/common_share/github/csp_assembly/nextflow.config
+Jul-08 17:30:11.274 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /raid/kbajbekov/common_share/github/csp_assembly/nextflow.config
+Jul-08 17:30:11.274 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /raid/kbajbekov/common_share/github/csp_assembly/tests/nextflow.config
+Jul-08 17:30:11.275 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /raid/kbajbekov/common_share/github/csp_assembly/nextflow.config
+Jul-08 17:30:11.276 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /raid/kbajbekov/common_share/github/csp_assembly/nextflow.config
+Jul-08 17:30:11.276 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /raid/kbajbekov/common_share/github/csp_assembly/tests/nextflow.config
+Jul-08 17:30:11.303 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/PAK-CSPMZ/kbajbekov/.nextflow/secrets/store.json
+Jul-08 17:30:11.307 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@1869f114] - activable => nextflow.secret.LocalSecretsProvider@1869f114
+Jul-08 17:30:11.328 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `test_full`
+Jul-08 17:30:12.915 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `test_full`
+Jul-08 17:30:13.194 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `test_full`
+Jul-08 17:30:13.203 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [bih, cfc_dev, uzl_omics, ifb_core, embl_hd, denbi_qbic, alice, mjolnir_globe, uppmax, giga, incliva, ilifu, ki_luria, uge, icr_alma, rosalind_uge, lugh, mccleary, unibe_ibu, vai, czbiohub_aws, jax, roslin, tes, scw, unc_longleaf, tigem, tubingen_apg, google, apollo, ipop_up, vsc_calcua, pdc_kth, googlels, ceci_nic5, ccga_cau, humantechnopole, stjude, daisybio, eddie, medair, biowulf, apptainer, bi, bigpurple, adcra, cedars, pawsey_setonix, vsc_kul_uhasselt, pawsey_nimbus, ucl_myriad, utd_ganymede, charliecloud, fred_hutch, seattlechildrens, icr_davros, ceres, arm, munin, rosalind, hasta, cfc, uzh, shu_bmrc, ebi_codon_slurm, ebc, ccga_dx, crick, ku_sund_danhead, marvin, shifter, biohpc_gen, mana, mamba, york_viking, unc_lccc, wehi, awsbatch, wustl_htcf, arcc, ceci_dragon2, imperial, maestro, software_license, cannon, genotoul, nci_gadi, abims, eva_grace, janelia, nu_genomics, googlebatch, oist, sahmri, kaust, alliance_canada, mpcdf, leicester, vsc_ugent, create, sage, cambridge, jex, podman, ebi_codon, cheaha, xanadu, nyu_hpc, test, marjorie, computerome, ucd_sonic, gpu, seg_globe, mssm, sanger, dkfz, bluebear, pasteur, einstein, ethz_euler, m3c, test_full, imb, ucl_cscluster, tuos_stanage, azurebatch, hki, seadragon, crukmi, csiro_petrichor, qmul_apocrita, wave, docker, engaging, gis, hypatia, psmn, eva, unity, cropdiversityhpc, nygc, fgcz, conda, crg, singularity, mpcdf_viper, pe2, self_hosted_runner, tufts, uw_hyak_pedslabs, binac2, debug, genouest, cbe, unsw_katana, utd_juno, phoenix, seawulf, uod_hpc, fub_curta, uct_hpc, aws_tower, binac, fsu_draco]
+Jul-08 17:30:13.229 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Jul-08 17:30:13.244 [main] INFO  nextflow.cli.CmdRun - Launching `/raid/kbajbekov/common_share/github/csp_assembly/main.nf` [gloomy_faraday] DSL2 - revision: d85ddf4366
+Jul-08 17:30:13.245 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins declared=[nf-schema@2.3.0]
+Jul-08 17:30:13.246 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jul-08 17:30:13.246 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[nf-schema@2.3.0]
+Jul-08 17:30:13.247 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-schema version: 2.3.0
+Jul-08 17:30:13.256 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-schema@2.3.0' resolved
+Jul-08 17:30:13.256 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-schema@2.3.0'
+Jul-08 17:30:13.261 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-schema@2.3.0
+Jul-08 17:30:13.307 [main] DEBUG nextflow.Session - Session UUID: ad7fb118-a60f-4395-87aa-89123355b2b7
+Jul-08 17:30:13.307 [main] DEBUG nextflow.Session - Run name: gloomy_faraday
+Jul-08 17:30:13.307 [main] DEBUG nextflow.Session - Executor pool size: 256
+Jul-08 17:30:13.314 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Jul-08 17:30:13.318 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=768; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jul-08 17:30:13.339 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.04.6 build 5954
+  Created: 01-07-2025 11:27 UTC (14:27 MSD)
+  System: Linux 5.4.0-186-generic
+  Runtime: Groovy 4.0.26 on OpenJDK 64-Bit Server VM 21.0.7+6-LTS
+  Encoding: UTF-8 (UTF-8)
+  Process: 3954832@dgx10.pak-cspmz.ru [127.0.1.1]
+  CPUs: 256 - Mem: 2 TB (82.5 GB) - Swap: 0 (0)
+Jul-08 17:30:13.363 [main] DEBUG nextflow.Session - Work-dir: /raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/1da154519380e0d2a9bfbc12e80a778d/work [ext2/ext3]
+Jul-08 17:30:13.364 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /raid/kbajbekov/common_share/github/csp_assembly/bin
+Jul-08 17:30:13.376 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jul-08 17:30:13.385 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jul-08 17:30:13.417 [main] DEBUG nextflow.Session - Observer factory: ValidationObserverFactory
+Jul-08 17:30:13.465 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Jul-08 17:30:13.490 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Jul-08 17:30:13.497 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 257; maxThreads: 1000
+Jul-08 17:30:13.558 [main] DEBUG nextflow.Session - Session start
+Jul-08 17:30:13.562 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/1da154519380e0d2a9bfbc12e80a778d/meta/trace.csv
+Jul-08 17:30:13.673 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jul-08 17:30:14.245 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-schema
+Jul-08 17:30:14.546 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryLog:paramsSummaryLog]; plugin Id: nf-schema
+Jul-08 17:30:14.547 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [validateParameters:validateParameters]; plugin Id: nf-schema
+Jul-08 17:30:14.549 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-schema
+Jul-08 17:30:14.549 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [samplesheetToList:samplesheetToList]; plugin Id: nf-schema
+Jul-08 17:30:14.726 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryLog:paramsSummaryLog]; plugin Id: nf-schema
+Jul-08 17:30:14.727 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [validateParameters:validateParameters]; plugin Id: nf-schema
+Jul-08 17:30:14.728 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-schema
+Jul-08 17:30:14.729 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [samplesheetToList:samplesheetToList]; plugin Id: nf-schema
+Jul-08 17:30:14.908 [main] INFO  nextflow.Nextflow - [1mInput/output options[0m
+  [0;34minput                     : [0;32m/raid/kbajbekov/common_share/github/csp_assembly/tests/test_samplesheet.csv[0m
+  [0;34moutdir                    : [0;32m/tmp/csp_assembly/test/[0m
+
+[1mInstitutional config options[0m
+  [0;34mconfig_profile_name       : [0;32mFull test profile[0m
+  [0;34mconfig_profile_description: [0;32mFull test dataset to check pipeline function[0m
+
+[1mGeneric options[0m
+  [0;34mtrace_report_suffix       : [0;32m2025-07-08_17-30-12[0m
+
+[1mCore Nextflow options[0m
+  [0;34mrunName                   : [0;32mgloomy_faraday[0m
+  [0;34mlaunchDir                 : [0;32m/raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/1da154519380e0d2a9bfbc12e80a778d[0m
+  [0;34mworkDir                   : [0;32m/raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/1da154519380e0d2a9bfbc12e80a778d/work[0m
+  [0;34mprojectDir                : [0;32m/raid/kbajbekov/common_share/github/csp_assembly[0m
+  [0;34muserName                  : [0;32mkbajbekov[0m
+  [0;34mprofile                   : [0;32mtest_full[0m
+  [0;34mconfigFiles               : [0;32m/raid/kbajbekov/common_share/github/csp_assembly/nextflow.config, /raid/kbajbekov/common_share/github/csp_assembly/nextflow.config, /raid/kbajbekov/common_share/github/csp_assembly/tests/nextflow.config[0m
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+-[2m----------------------------------------------------[0m-
+Jul-08 17:30:14.909 [main] DEBUG n.validation.ValidationExtension - Starting parameters validation
+Jul-08 17:30:14.928 [main] WARN  n.validation.ValidationExtension - The following invalid input values have been detected:
+
+* --validation: false
+
+
+Jul-08 17:30:15.004 [main] DEBUG nextflow.validation.SchemaEvaluator - Started validating /raid/kbajbekov/common_share/github/csp_assembly/tests/test_samplesheet.csv
+Jul-08 17:30:15.069 [main] ERROR n.validation.ValidationExtension - Validation of pipeline parameters failed!
+Jul-08 17:30:15.073 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_4f612cfd8c52e8cd: /raid/kbajbekov/common_share/github/csp_assembly/subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+  Script_0fdb2e5f8575be0c: /raid/kbajbekov/common_share/github/csp_assembly/modules/nf-core/multiqc/main.nf
+  Script_215a636da7ab24a2: /raid/kbajbekov/common_share/github/csp_assembly/subworkflows/nf-core/utils_nfschema_plugin/main.nf
+  Script_b355087dc9d365d0: /raid/kbajbekov/common_share/github/csp_assembly/modules/nf-core/fastp/main.nf
+  Script_cd1c5d1780376c52: /raid/kbajbekov/common_share/github/csp_assembly/subworkflows/local/utils_nfcore_assembly_pipeline/main.nf
+  Script_5c4e8d4051efa81e: /raid/kbajbekov/common_share/github/csp_assembly/subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+  Script_be29d13cdfe16c4a: /raid/kbajbekov/common_share/github/csp_assembly/subworkflows/local/short_reads_preproc/main.nf
+  Script_9b740f29ad1faae4: /raid/kbajbekov/common_share/github/csp_assembly/modules/local/rasusa/main.nf
+  Script_b37f7b1257c41087: /raid/kbajbekov/common_share/github/csp_assembly/main.nf
+  Script_d8edaf2dd914b567: /raid/kbajbekov/common_share/github/csp_assembly/workflows/assembly.nf
+Jul-08 17:30:15.073 [main] DEBUG nextflow.Session - Session aborted -- Cause: [0;31mThe following invalid input values have been detected:
+
+* --input (/raid/kbajbekov/common_share/github/csp_assembly/tests/test_samplesheet.csv): Validation of file failed:
+	-> Entry 1: Error for field 'short_fastq_1' (${projectDir}/tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz): the file or directory '${projectDir}/tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz' does not exist (FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz')
+	-> Entry 2: Error for field 'short_fastq_1' (tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz): the file or directory 'tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz' does not exist (FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz')
+	-> Entry 3: Error for field 'short_fastq_2' (tests/test_data/illumina/GCF_000012125.1_cov_30_2.fq.gz): the file or directory 'tests/test_data/illumina/GCF_000012125.1_cov_30_2.fq.gz' does not exist (FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz')
+	-> Entry 3: Error for field 'short_fastq_1' (tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz): the file or directory 'tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz' does not exist (FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz')
+	-> Entry 4: Error for field 'short_fastq_2' (tests/test_data/illumina/GCF_000012125.1_cov_30_2.fq.gz): the file or directory 'tests/test_data/illumina/GCF_000012125.1_cov_30_2.fq.gz' does not exist (FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz')
+	-> Entry 4: Error for field 'short_fastq_1' (tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz): the file or directory 'tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz' does not exist (FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz')
+	-> Entry 5: Error for field 'short_fastq_2' (tests/test_data/illumina/GCF_000012125.1_cov_30_2.fq.gz): the file or directory 'tests/test_data/illumina/GCF_000012125.1_cov_30_2.fq.gz' does not exist (FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz')
+	-> Entry 5: Error for field 'short_fastq_1' (tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz): the file or directory 'tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz' does not exist (FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz')
+[0m
+
+Jul-08 17:30:15.084 [main] DEBUG nextflow.cli.Launcher - Operation aborted
+nextflow.validation.SchemaValidationException: [0;31mThe following invalid input values have been detected:
+
+* --input (/raid/kbajbekov/common_share/github/csp_assembly/tests/test_samplesheet.csv): Validation of file failed:
+	-> Entry 1: Error for field 'short_fastq_1' (${projectDir}/tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz): the file or directory '${projectDir}/tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz' does not exist (FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz')
+	-> Entry 2: Error for field 'short_fastq_1' (tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz): the file or directory 'tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz' does not exist (FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz')
+	-> Entry 3: Error for field 'short_fastq_2' (tests/test_data/illumina/GCF_000012125.1_cov_30_2.fq.gz): the file or directory 'tests/test_data/illumina/GCF_000012125.1_cov_30_2.fq.gz' does not exist (FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz')
+	-> Entry 3: Error for field 'short_fastq_1' (tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz): the file or directory 'tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz' does not exist (FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz')
+	-> Entry 4: Error for field 'short_fastq_2' (tests/test_data/illumina/GCF_000012125.1_cov_30_2.fq.gz): the file or directory 'tests/test_data/illumina/GCF_000012125.1_cov_30_2.fq.gz' does not exist (FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz')
+	-> Entry 4: Error for field 'short_fastq_1' (tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz): the file or directory 'tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz' does not exist (FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz')
+	-> Entry 5: Error for field 'short_fastq_2' (tests/test_data/illumina/GCF_000012125.1_cov_30_2.fq.gz): the file or directory 'tests/test_data/illumina/GCF_000012125.1_cov_30_2.fq.gz' does not exist (FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz')
+	-> Entry 5: Error for field 'short_fastq_1' (tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz): the file or directory 'tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz' does not exist (FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz')
+[0m
+
+	at nextflow.validation.ValidationExtension.validateParameters(ValidationExtension.groovy:322)
+	at nextflow.validation.ValidationExtension.validateParameters(ValidationExtension.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at nextflow.script.FunctionDef.invoke_a(FunctionDef.groovy:64)
+	at nextflow.script.ComponentDef.invoke_o(ComponentDef.groovy:40)
+	at nextflow.script.WorkflowBinding.invokeMethod(WorkflowBinding.groovy:105)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokePogoMethod(InvokerHelper.java:651)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:628)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeOnDelegationObjects(ClosureMetaClass.java:392)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at Script_215a636da7ab24a2$_runScript_closure1$_closure2.doCall(Script_215a636da7ab24a2:39)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:280)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at groovy.lang.Closure.call(Closure.java:433)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at nextflow.script.WorkflowDef.run0(WorkflowDef.groovy:205)
+	at nextflow.script.WorkflowDef.run(WorkflowDef.groovy:189)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:51)
+	at nextflow.script.ComponentDef.invoke_o(ComponentDef.groovy:40)
+	at nextflow.script.WorkflowBinding.invokeMethod(WorkflowBinding.groovy:105)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokePogoMethod(InvokerHelper.java:651)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:628)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeOnDelegationObjects(ClosureMetaClass.java:392)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at Script_cd1c5d1780376c52$_runScript_closure3$_closure5.doCall(Script_cd1c5d1780376c52:51)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:280)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at groovy.lang.Closure.call(Closure.java:433)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at nextflow.script.WorkflowDef.run0(WorkflowDef.groovy:205)
+	at nextflow.script.WorkflowDef.run(WorkflowDef.groovy:189)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:51)
+	at nextflow.script.ComponentDef.invoke_o(ComponentDef.groovy:40)
+	at nextflow.script.WorkflowBinding.invokeMethod(WorkflowBinding.groovy:105)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokePogoMethod(InvokerHelper.java:651)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:628)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeOnDelegationObjects(ClosureMetaClass.java:392)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at Script_b37f7b1257c41087$_runScript_closure1$_closure2.doCall(Script_b37f7b1257c41087:39)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:280)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at groovy.lang.Closure.call(Closure.java:433)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at nextflow.script.WorkflowDef.run0(WorkflowDef.groovy:205)
+	at nextflow.script.WorkflowDef.run(WorkflowDef.groovy:189)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:51)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.script.BaseScript.run0(BaseScript.groovy:182)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:193)
+	at nextflow.script.parser.v1.ScriptLoaderV1.runScript(ScriptLoaderV1.groovy:246)
+	at nextflow.script.parser.v1.ScriptLoaderV1.runScript(ScriptLoaderV1.groovy)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:246)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:139)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:379)
+	at nextflow.cli.Launcher.run(Launcher.groovy:513)
+	at nextflow.cli.Launcher.main(Launcher.groovy:673)

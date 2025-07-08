@@ -1,0 +1,3 @@
+badread simulate --reference /common_share/github/csp_assembly/tests/test_data/GCF_000012125.1_ASM1212v1_genomic.fna --quantity 30x --error_model nanopore2023 --qscore_model nanopore2023 --seed 16 --start_adapter 90,60 --end_adapter 50,20 --start_adapter_seq AATGTACTTCGTTCAGTTACGTATTGCT --end_adapter_seq GCAATACGTAACTGAACGAAGT --junk_reads 1 --random_reads 1 --chimeras 1 --glitches 10000,25,25 | gzip > /common_share/github/csp_assembly/tests/test_data/ont/ont_test.fq.gz
+
+/home/PAK-CSPMZ/kbajbekov/programms/art_bin_MountRainier/art_illumina --in /common_share/github/csp_assembly/tests/test_data/GCF_000012125.1_ASM1212v1_genomic.fna --len 100 --mflen 400 --sdev 50 --fcov 30 --paired --out /common_share/github/csp_assembly/tests/test_data/illumina/GCF_000012125.1_cov_30_

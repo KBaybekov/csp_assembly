@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://raw.githubusercontent.com/kbaybekov/csp_assembly/master/nextflow_schema.json",
-    "title": "kbaybekov/csp_assembly pipeline parameters",
+    "$id": "https://raw.githubusercontent.com/csp/assembly/master/nextflow_schema.json",
+    "title": "csp/assembly pipeline parameters",
     "description": "Pipeline for hybrid assembling, written for CSP",
     "type": "object",
     "$defs": {
