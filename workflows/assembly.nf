@@ -47,14 +47,14 @@ workflow ASSEMBLY {
     ch_samples = ch_samplesheet.map { row ->
     def meta = [:]
     meta.id = row.sample
-    //meta.ont_fastq = row.ont_fastq
-    meta.ont_fastq = file("${params.modules_testdata_base_path ?: ''}${row.ont_fastq}")
-    //meta.short_fastq_1 = row.short_fastq_1
-    meta.short_fastq_1 = file("${params.modules_testdata_base_path ?: ''}${row.short_fastq_1}")
+    meta.ont_fastq = row.ont_fastq
+    // meta.ont_fastq = file("${params.modules_testdata_base_path ?: ''}${row.ont_fastq}")
+    meta.short_fastq_1 = row.short_fastq_1
+    // meta.short_fastq_1 = file("${params.modules_testdata_base_path ?: ''}${row.short_fastq_1}")
     meta.single_end = row.short_fastq_2 ? false : true
     if (row.short_fastq_2) {
-        //meta.short_fastq_2 = row.short_fastq_2
-        meta.short_fastq_2 = file("${params.modules_testdata_base_path ?: ''}${row.short_fastq_1}")
+        meta.short_fastq_2 = row.short_fastq_2
+        // meta.short_fastq_2 = file("${params.modules_testdata_base_path ?: ''}${row.short_fastq_1}")
     }
     if (row.target_coverage_short) {
         meta.target_coverage_short = row.target_coverage_short

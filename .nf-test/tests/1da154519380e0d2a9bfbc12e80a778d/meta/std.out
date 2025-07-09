@@ -1,3 +1,6 @@
-ERROR ~ Validation of pipeline parameters failed!
+ERROR ~ Invalid method invocation `call` with arguments: [[id:chlamydia_test_0], /common_share/github/csp_assembly/tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz, [], []] (java.util.ArrayList) on _closure6 type
+
+ -- Check '/raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/1da154519380e0d2a9bfbc12e80a778d/meta/nextflow.log' file for details
+ERROR ~ Pipeline failed. Please refer to troubleshooting docs: https://nf-co.re/docs/usage/troubleshooting
 
  -- Check '/raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/1da154519380e0d2a9bfbc12e80a778d/meta/nextflow.log' file for details

@@ -7,7 +7,7 @@ process RASUSA {
     label 'process_medium'
 
     conda "${moduleDir}/environment.yml"
-    container 'quay.io/biocontainers/rasusa:2.1.0-1'
+    container 'biocontainers/rasusa:2.1.0-1'
 
     input:
     tuple val(meta), path(reads), val(coverage), val(genome_size), val(seed)
