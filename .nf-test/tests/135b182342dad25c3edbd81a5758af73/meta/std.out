@@ -1,0 +1,3 @@
+ERROR ~ Workflow `ASSEMBLY` declares 1 input channels but 0 were given
+
+ -- Check script '/raid/kbajbekov/common_share/github/csp_assembly/.nf-test-135b182342dad25c3edbd81a5758af73.nf' at line: 37 or see '/raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/135b182342dad25c3edbd81a5758af73/meta/nextflow.log' file for more details

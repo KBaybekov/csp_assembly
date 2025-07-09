@@ -1,0 +1,6 @@
+ERROR ~ Invalid method invocation `call` with arguments: [[id:chlamydia_test_0], /common_share/github/csp_assembly/tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz, [], []] (java.util.ArrayList) on _closure6 type
+
+ -- Check '/raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/2f0fa6de9a6f243c4cae158b06b03625/meta/nextflow.log' file for details
+ERROR ~ Pipeline failed. Please refer to troubleshooting docs: https://nf-co.re/docs/usage/troubleshooting
+
+ -- Check '/raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/2f0fa6de9a6f243c4cae158b06b03625/meta/nextflow.log' file for details

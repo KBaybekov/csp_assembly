@@ -1,0 +1,3 @@
+Process `RASUSA` declares 1 input channel but 0 were specified
+
+ -- Check script '/raid/kbajbekov/common_share/github/csp_assembly/.nf-test-481267e2b126b07dc75ee5e3ce8373c4.nf' at line: 38 or see '/raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/481267e2b126b07dc75ee5e3ce8373c4/meta/nextflow.log' file for more details

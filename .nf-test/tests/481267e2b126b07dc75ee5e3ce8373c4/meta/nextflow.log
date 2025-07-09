@@ -1,0 +1,92 @@
+Jul-09 16:16:07.145 [main] DEBUG nextflow.cli.Launcher - $> nextflow -quiet -log /raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/481267e2b126b07dc75ee5e3ce8373c4/meta/nextflow.log run /raid/kbajbekov/common_share/github/csp_assembly/.nf-test-481267e2b126b07dc75ee5e3ce8373c4.nf -c /raid/kbajbekov/common_share/github/csp_assembly/nextflow.config -c /raid/kbajbekov/common_share/github/csp_assembly/tests/nextflow.config -params-file /raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/481267e2b126b07dc75ee5e3ce8373c4/meta/params.json -ansi-log false -profile test_full -with-trace /raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/481267e2b126b07dc75ee5e3ce8373c4/meta/trace.csv -w /raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/481267e2b126b07dc75ee5e3ce8373c4/work
+Jul-09 16:16:07.227 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.6
+Jul-09 16:16:07.247 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/PAK-CSPMZ/kbajbekov/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.1,nf-k8s@1.0.0,nf-tower@1.11.4,nf-wave@1.12.1
+Jul-09 16:16:07.275 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jul-09 16:16:07.276 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jul-09 16:16:07.279 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Jul-09 16:16:07.289 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jul-09 16:16:07.308 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /raid/kbajbekov/common_share/github/csp_assembly/nextflow.config
+Jul-09 16:16:07.311 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /raid/kbajbekov/common_share/github/csp_assembly/nextflow.config
+Jul-09 16:16:07.311 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /raid/kbajbekov/common_share/github/csp_assembly/tests/nextflow.config
+Jul-09 16:16:07.312 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /raid/kbajbekov/common_share/github/csp_assembly/nextflow.config
+Jul-09 16:16:07.313 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /raid/kbajbekov/common_share/github/csp_assembly/nextflow.config
+Jul-09 16:16:07.313 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /raid/kbajbekov/common_share/github/csp_assembly/tests/nextflow.config
+Jul-09 16:16:07.339 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/PAK-CSPMZ/kbajbekov/.nextflow/secrets/store.json
+Jul-09 16:16:07.342 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@1869f114] - activable => nextflow.secret.LocalSecretsProvider@1869f114
+Jul-09 16:16:07.361 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `test_full`
+Jul-09 16:16:08.212 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `test_full`
+Jul-09 16:16:08.330 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `test_full`
+Jul-09 16:16:08.339 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [debug, test, apptainer, gpu, wave, docker, shifter, mamba, charliecloud, conda, singularity, arm, test_full, podman]
+Jul-09 16:16:08.366 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+Jul-09 16:16:08.379 [main] INFO  nextflow.cli.CmdRun - Launching `/raid/kbajbekov/common_share/github/csp_assembly/.nf-test-481267e2b126b07dc75ee5e3ce8373c4.nf` [furious_northcutt] DSL2 - revision: f1c6b9bdbb
+Jul-09 16:16:08.380 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins declared=[nf-schema@2.3.0]
+Jul-09 16:16:08.381 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jul-09 16:16:08.381 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[nf-schema@2.3.0]
+Jul-09 16:16:08.382 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-schema version: 2.3.0
+Jul-09 16:16:08.390 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-schema@2.3.0' resolved
+Jul-09 16:16:08.390 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-schema@2.3.0'
+Jul-09 16:16:08.395 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-schema@2.3.0
+Jul-09 16:16:08.458 [main] DEBUG nextflow.Session - Session UUID: 021e32bd-70d1-4eb5-93b7-a4890985d804
+Jul-09 16:16:08.458 [main] DEBUG nextflow.Session - Run name: furious_northcutt
+Jul-09 16:16:08.458 [main] DEBUG nextflow.Session - Executor pool size: 256
+Jul-09 16:16:08.466 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Jul-09 16:16:08.470 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=768; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jul-09 16:16:08.491 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.04.6 build 5954
+  Created: 01-07-2025 11:27 UTC (14:27 MSD)
+  System: Linux 5.4.0-186-generic
+  Runtime: Groovy 4.0.26 on OpenJDK 64-Bit Server VM 21.0.7+6-LTS
+  Encoding: UTF-8 (UTF-8)
+  Process: 898203@dgx10.pak-cspmz.ru [127.0.1.1]
+  CPUs: 256 - Mem: 2 TB (80.5 GB) - Swap: 0 (0)
+Jul-09 16:16:08.514 [main] DEBUG nextflow.Session - Work-dir: /raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/481267e2b126b07dc75ee5e3ce8373c4/work [ext2/ext3]
+Jul-09 16:16:08.515 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /raid/kbajbekov/common_share/github/csp_assembly/bin
+Jul-09 16:16:08.525 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jul-09 16:16:08.534 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jul-09 16:16:08.552 [main] DEBUG nextflow.Session - Observer factory: ValidationObserverFactory
+Jul-09 16:16:08.576 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Jul-09 16:16:08.596 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Jul-09 16:16:08.604 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 257; maxThreads: 1000
+Jul-09 16:16:08.655 [main] DEBUG nextflow.Session - Session start
+Jul-09 16:16:08.658 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/481267e2b126b07dc75ee5e3ce8373c4/meta/trace.csv
+Jul-09 16:16:08.852 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jul-09 16:16:09.039 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name RASUSA
+Jul-09 16:16:09.045 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_7186470009226468: /raid/kbajbekov/common_share/github/csp_assembly/modules/local/rasusa/main.nf
+  Script_ecdcea3880b904c0: /raid/kbajbekov/common_share/github/csp_assembly/.nf-test-481267e2b126b07dc75ee5e3ce8373c4.nf
+Jul-09 16:16:09.045 [main] DEBUG nextflow.Session - Session aborted -- Cause: Process `RASUSA` declares 1 input channel but 0 were specified
+Jul-09 16:16:09.053 [main] ERROR nextflow.cli.Launcher - Process `RASUSA` declares 1 input channel but 0 were specified
+nextflow.exception.ScriptRuntimeException: Process `RASUSA` declares 1 input channel but 0 were specified
+	at nextflow.script.ProcessDef.run(ProcessDef.groovy:175)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:51)
+	at nextflow.script.ComponentDef.invoke_o(ComponentDef.groovy:40)
+	at nextflow.script.WorkflowBinding.invokeMethod(WorkflowBinding.groovy:105)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokePogoMethod(InvokerHelper.java:651)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:628)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeOnDelegationObjects(ClosureMetaClass.java:392)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at Script_ecdcea3880b904c0$_runScript_closure4$_closure6.doCall(Script_ecdcea3880b904c0:38)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:280)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at groovy.lang.Closure.call(Closure.java:433)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at nextflow.script.WorkflowDef.run0(WorkflowDef.groovy:205)
+	at nextflow.script.WorkflowDef.run(WorkflowDef.groovy:189)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:51)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.script.BaseScript.run0(BaseScript.groovy:182)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:193)
+	at nextflow.script.parser.v1.ScriptLoaderV1.runScript(ScriptLoaderV1.groovy:246)
+	at nextflow.script.parser.v1.ScriptLoaderV1.runScript(ScriptLoaderV1.groovy)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:246)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:139)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:379)
+	at nextflow.cli.Launcher.run(Launcher.groovy:513)
+	at nextflow.cli.Launcher.main(Launcher.groovy:673)

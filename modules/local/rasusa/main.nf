@@ -14,7 +14,7 @@ process RASUSA {
 
     output:
     path "versions.yml", emit: versions
-    tuple val(meta), path("r1_subsampled.fq"), path("r2_subsampled.fq"), emit: subsampled_fqs
+    tuple val(meta), path("r1_out.fq"), path("r2_out.fq"), emit: subsampled_fqs
 
     when:
     task.ext.when == null || task.ext.when

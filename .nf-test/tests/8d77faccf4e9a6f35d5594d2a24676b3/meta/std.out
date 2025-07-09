@@ -1,0 +1,3 @@
+ERROR ~ Workflow `SHORT_READS_PREPROC` declares 1 input channels but 0 were given
+
+ -- Check script '/raid/kbajbekov/common_share/github/csp_assembly/.nf-test-8d77faccf4e9a6f35d5594d2a24676b3.nf' at line: 37 or see '/raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/8d77faccf4e9a6f35d5594d2a24676b3/meta/nextflow.log' file for more details

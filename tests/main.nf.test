@@ -6,8 +6,10 @@ nextflow_pipeline {
     test("Should run without failures") {
 
         when {
-            params {}
-                        
+            params {
+                // define parameters here. Example: 
+                // outdir = "tests/results"
+            }
         }
 
         then {

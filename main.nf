@@ -36,6 +36,7 @@ workflow {
     //
     // SUBWORKFLOW: Run initialisation tasks
     //
+    
     PIPELINE_INITIALISATION (
         params.version,
         params.validate_params,
@@ -54,6 +55,7 @@ workflow {
     //
     // SUBWORKFLOW: Run completion tasks
     //
+
     PIPELINE_COMPLETION (
         params.outdir,
         params.monochrome_logs,

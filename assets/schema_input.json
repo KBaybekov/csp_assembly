@@ -13,32 +13,77 @@
                 "errorMessage": "Sample name must be provided and cannot contain spaces",
                 "meta": ["id"]
             },
-            "short_fastq_1": {
+            "fq_short_F": {
                 "type": "string",
                 "format": "file-path",
                 "exists": true,
                 "pattern": "^\\S+\\.f(ast)?q\\.gz$",
-                "errorMessage": "FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'"
+                "errorMessage": "FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'",
+                "meta": ["fq_short_F"]
             },
-            "short_fastq_2": {
+            "fq_short_R": {
                 "type": "string",
                 "format": "file-path",
                 "exists": true,
                 "pattern": "^\\S+\\.f(ast)?q\\.gz$",
-                "errorMessage": "FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'"
+                "errorMessage": "FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'",
+                "meta": ["fq_short_R"]
             },
-            "fastq_ont": {
+            "fq_ont": {
                 "type": "string",
                 "format": "file-path",
                 "exists": true,
                 "pattern": "^\\S+\\.f(ast)?q\\.gz$",
-                "errorMessage": "FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'"
+                "errorMessage": "FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'",
+                "meta": ["fq_ont"]
+            },
+            "reference_fasta": {
+                "type": "string",
+                "format": "file-path",
+                "exists": true,
+                "pattern": "^\\S+\\.(fa|fna|fasta)$",
+                "errorMessage": "Fasta file cannot contain spaces and must have extension '.fa', '.fna' or '.fasta'",
+                "meta": ["reference_fasta"]
+            },
+            "reference_gff": {
+                "type": "string",
+                "format": "file-path",
+                "exists": true,
+                "pattern": "^\\S+\\.gff$",
+                "errorMessage": "GFF file cannot contain spaces and must have extension '.gff'",
+                "meta": ["reference_gff"]
+            },
+            "genome_size": {
+                "type": "string",
+                "pattern": "^[0-9]+(\\.[0-9]+)?[KMGTPE]?$",
+                "errorMessage": "Invalid genome size format",
+                "meta": ["genome_size"]
+            },
+            "target_coverage_short": {
+                "type": "integer",
+                "pattern": "^[0-9]$",
+                "errorMessage": "Invalid value for short reads' coverage",
+                "meta": ["target_coverage_short"]
+            },
+            "target_coverage_ont": {
+                "type": "integer",
+                "pattern": "^[0-9]$",
+                "errorMessage": "Invalid value for ont reads' coverage",
+                "meta": ["target_coverage_ont"]
+            },
+            "seed": {
+                "type": "integer",
+                "pattern": "^[0-9]$",
+                "defult": 42,
+                "errorMessage": "Invalid seed format",
+                "meta": ["seed"]
             }
+            
         },
         "required": ["sample"],
             "anyOf": [
-                {"required" : ["short_fastq_1"]},
-                {"required" : ["fastq_ont"]}
+                {"required" : ["fq_short_F"]},
+                {"required" : ["fq_ont"]}
             ]
     }
 }

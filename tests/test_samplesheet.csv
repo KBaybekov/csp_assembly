@@ -1,4 +1,4 @@
-sample,reference_fasta,genome_size,reference_gff,short_fastq_1,short_fastq_2,ont_fastq,target_coverage_short,target_coverage_ont,seed
+sample,reference_fasta,genome_size,reference_gff,fq_short_F,fq_short_R,ont_fastq,target_coverage_short,target_coverage_ont,seed
 chlamydia_test_0,,,,${projectDir}/tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz,,,,,
 chlamydia_test_1,,,,tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz,,,20,,
 chlamydia_test_2,tests/test_data/GCF_000012125.1_ASM1212v1_genomic.fna,1.1M,tests/test_data/GCF_000012125.1.gff,tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz,tests/test_data/illumina/GCF_000012125.1_cov_30_2.fq.gz,tests/test_data/ont/ont_test.fq.gz,20,20,5

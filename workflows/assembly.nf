@@ -44,17 +44,19 @@ workflow ASSEMBLY {
     //
     // Generating sample data from input samplesheet
     //
+
+
     ch_samples = ch_samplesheet.map { row ->
     def meta = [:]
-    meta.id = row.sample
-    meta.ont_fastq = row.ont_fastq
-    // meta.ont_fastq = file("${params.modules_testdata_base_path ?: ''}${row.ont_fastq}")
-    meta.short_fastq_1 = row.short_fastq_1
-    // meta.short_fastq_1 = file("${params.modules_testdata_base_path ?: ''}${row.short_fastq_1}")
-    meta.single_end = row.short_fastq_2 ? false : true
-    if (row.short_fastq_2) {
-        meta.short_fastq_2 = row.short_fastq_2
-        // meta.short_fastq_2 = file("${params.modules_testdata_base_path ?: ''}${row.short_fastq_1}")
+    meta.id = row.id
+    meta.fq_ont = row.fq_ont
+    meta.fq_short_F = row.fq_short_F
+    meta.seed = row.seed
+    if (row.fq_short_R) {
+        meta.fq_short_R = row.fq_short_R
+        meta.single_end = false
+    } else {
+        meta.single_end = true
     }
     if (row.target_coverage_short) {
         meta.target_coverage_short = row.target_coverage_short
@@ -66,27 +68,47 @@ workflow ASSEMBLY {
         meta.target_coverage_ont = row.target_coverage_ont
     }
     if (row.seed) {
-        meta.seed = row.seed ? false: 42
+        meta.seed = row.seed
+    } else {
+        meta.seed = 42
     }
 
+    def short_reads = meta.single_end ? 
+        [meta.fq_short_F]:
+        [meta.fq_short_F, meta.fq_short_R]
     
-    /*
-    def reads = row.short_fastq_2 ? 
-        [file("${params.modules_testdata_base_path ?: ''}${row.short_fastq_1}"), 
-        file("${params.modules_testdata_base_path ?: ''}${row.short_fastq_2}")] : 
-        [file("${params.modules_testdata_base_path ?: ''}${row.short_fastq_1}")]
-    */
+    def long_reads = meta.fq_ont==null ?
+        null:
+        [meta.fq_ont]
+        
+    return [meta, short_reads, long_reads]
+}
+/*
+    ch_samples = ch_samplesheet.map { meta ->
+    meta.view()
+    //def new_meta = meta
+    if (meta.fq_short_R) {
+        meta.add("single_end":false)
+    } else {
+        meta.add("single_end":true).flatten()
+    }
+    if (!meta.seed) {
+        meta.add("seed":42)
+    }
+    
 
     def reads = meta.single_end ? 
-        [meta.short_fastq_1, meta.short_fastq_2]:
-        [meta.short_fastq_1]
-
-
-    
+        [meta.fq_short_F]:
+        [meta.fq_short_F, meta.fq_short_R]
+        
     return [meta, reads]
 }
+*/
 
-    SHORT_READS_PREPROC(ch_samples)
+    ch_samples.view()
+    //ch_samples = Channel.empty()
+
+    //SHORT_READS_PREPROC(ch_samples)
 
 
 
@@ -100,11 +122,6 @@ workflow ASSEMBLY {
         Channel.empty()
     ch_multiqc_logo        = Channel.fromPath(
         "$projectDir/assets/omg_logo_v0.png", checkIfExists: true)
-    /*
-    ch_multiqc_logo          = params.multiqc_logo ?
-        Channel.fromPath(params.multiqc_logo, checkIfExists: true) :
-        Channel.empty()
-    */
     summary_params      = paramsSummaryMap(
         workflow, parameters_schema: "nextflow_schema.json")
     ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_params))

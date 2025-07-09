@@ -64,15 +64,15 @@ workflow PIPELINE_INITIALISATION {
     //
     // Create channel from input file provided through params.input
     //
-
+/*
     Channel
         .fromList(samplesheetToList(params.input, "${projectDir}/assets/schema_input.json"))
         .map {
-            meta, fastq_1, fastq_2 ->
+            meta, fastq_1, fastq_2, fq_ont ->
                 if (!fastq_2) {
-                    return [ meta.id, meta + [ single_end:true ], [ fastq_1 ] ]
+                    return [ meta.id, meta + [ single_end:true ], [ fastq_1, fq_ont ] ]
                 } else {
-                    return [ meta.id, meta + [ single_end:false ], [ fastq_1, fastq_2 ] ]
+                    return [ meta.id, meta + [ single_end:false ], [ fastq_1, fastq_2, fq_ont ] ]
                 }
         }
         .groupTuple()
@@ -84,7 +84,12 @@ workflow PIPELINE_INITIALISATION {
                 return [ meta, fastqs.flatten() ]
         }
         .set { ch_samplesheet }
+        */
 
+    Channel
+        .fromList(samplesheetToList(params.input, "${projectDir}/assets/schema_input.json"))
+        .set { ch_samplesheet }
+    //ch_samplesheet.view()
     emit:
     samplesheet = ch_samplesheet
     versions    = ch_versions
@@ -129,8 +134,9 @@ workflow PIPELINE_COMPLETION {
 //
 // Validate channels from input samplesheet
 //
+/*
 def validateInputSamplesheet(input) {
-    def (metas, fastqs) = input[1..2]
+    def metas = input
 
     // Check that multiple runs of the same sample are of the same datatype i.e. single-end / paired-end
     def endedness_ok = metas.collect{ meta -> meta.single_end }.unique().size == 1
@@ -138,8 +144,9 @@ def validateInputSamplesheet(input) {
         error("Please check input samplesheet -> Multiple runs of a sample must be of the same datatype i.e. single-end or paired-end: ${metas[0].id}")
     }
 
-    return [ metas[0], fastqs ]
+    return [ metas[0]]
 }
+*/
 //
 // Generate methods description for MultiQC
 //

@@ -1,192 +1,140 @@
-Jul-09 11:13:57.615 [main] DEBUG nextflow.cli.Launcher - $> nextflow -quiet -log /raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/1da154519380e0d2a9bfbc12e80a778d/meta/nextflow.log run /raid/kbajbekov/common_share/github/csp_assembly/main.nf -c /raid/kbajbekov/common_share/github/csp_assembly/nextflow.config -c /raid/kbajbekov/common_share/github/csp_assembly/tests/nextflow.config -params-file /raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/1da154519380e0d2a9bfbc12e80a778d/meta/params.json -ansi-log false -profile test_full -with-trace /raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/1da154519380e0d2a9bfbc12e80a778d/meta/trace.csv -w /raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/1da154519380e0d2a9bfbc12e80a778d/work
-Jul-09 11:13:57.700 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.6
-Jul-09 11:13:57.722 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/PAK-CSPMZ/kbajbekov/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.1,nf-k8s@1.0.0,nf-tower@1.11.4,nf-wave@1.12.1
-Jul-09 11:13:57.751 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
-Jul-09 11:13:57.752 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
-Jul-09 11:13:57.755 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
-Jul-09 11:13:57.765 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
-Jul-09 11:13:57.787 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /raid/kbajbekov/common_share/github/csp_assembly/nextflow.config
-Jul-09 11:13:57.791 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /raid/kbajbekov/common_share/github/csp_assembly/nextflow.config
-Jul-09 11:13:57.791 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /raid/kbajbekov/common_share/github/csp_assembly/tests/nextflow.config
-Jul-09 11:13:57.792 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /raid/kbajbekov/common_share/github/csp_assembly/nextflow.config
-Jul-09 11:13:57.793 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /raid/kbajbekov/common_share/github/csp_assembly/nextflow.config
-Jul-09 11:13:57.793 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /raid/kbajbekov/common_share/github/csp_assembly/tests/nextflow.config
-Jul-09 11:13:57.822 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/PAK-CSPMZ/kbajbekov/.nextflow/secrets/store.json
-Jul-09 11:13:57.825 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@1869f114] - activable => nextflow.secret.LocalSecretsProvider@1869f114
-Jul-09 11:13:57.846 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `test_full`
-Jul-09 11:13:59.336 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `test_full`
-Jul-09 11:13:59.590 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `test_full`
-Jul-09 11:13:59.597 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [bih, cfc_dev, uzl_omics, ifb_core, embl_hd, denbi_qbic, alice, mjolnir_globe, uppmax, giga, incliva, ilifu, ki_luria, uge, icr_alma, rosalind_uge, lugh, mccleary, unibe_ibu, vai, czbiohub_aws, jax, roslin, tes, scw, unc_longleaf, tigem, tubingen_apg, google, apollo, ipop_up, vsc_calcua, pdc_kth, googlels, ceci_nic5, ccga_cau, humantechnopole, stjude, daisybio, eddie, medair, biowulf, apptainer, bi, bigpurple, adcra, cedars, pawsey_setonix, vsc_kul_uhasselt, pawsey_nimbus, ucl_myriad, utd_ganymede, charliecloud, fred_hutch, seattlechildrens, icr_davros, ceres, arm, munin, rosalind, hasta, cfc, uzh, shu_bmrc, ebi_codon_slurm, ebc, ccga_dx, crick, ku_sund_danhead, marvin, shifter, biohpc_gen, mana, mamba, york_viking, unc_lccc, wehi, awsbatch, wustl_htcf, arcc, ceci_dragon2, imperial, maestro, software_license, cannon, genotoul, nci_gadi, abims, eva_grace, janelia, nu_genomics, googlebatch, oist, sahmri, kaust, alliance_canada, mpcdf, leicester, vsc_ugent, create, sage, cambridge, jex, podman, ebi_codon, cheaha, xanadu, nyu_hpc, test, marjorie, computerome, ucd_sonic, gpu, seg_globe, mssm, sanger, dkfz, bluebear, pasteur, einstein, ethz_euler, m3c, test_full, imb, ucl_cscluster, tuos_stanage, azurebatch, hki, seadragon, crukmi, csiro_petrichor, qmul_apocrita, wave, docker, engaging, gis, hypatia, psmn, eva, unity, cropdiversityhpc, nygc, fgcz, conda, crg, singularity, mpcdf_viper, pe2, self_hosted_runner, tufts, uw_hyak_pedslabs, binac2, debug, genouest, cbe, unsw_katana, utd_juno, phoenix, seawulf, uod_hpc, fub_curta, uct_hpc, aws_tower, binac, fsu_draco]
-Jul-09 11:13:59.623 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
-Jul-09 11:13:59.637 [main] INFO  nextflow.cli.CmdRun - Launching `/raid/kbajbekov/common_share/github/csp_assembly/main.nf` [soggy_kalam] DSL2 - revision: d85ddf4366
-Jul-09 11:13:59.638 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins declared=[nf-schema@2.3.0]
-Jul-09 11:13:59.638 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
-Jul-09 11:13:59.638 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[nf-schema@2.3.0]
-Jul-09 11:13:59.640 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-schema version: 2.3.0
-Jul-09 11:13:59.647 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-schema@2.3.0' resolved
-Jul-09 11:13:59.648 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-schema@2.3.0'
-Jul-09 11:13:59.652 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-schema@2.3.0
-Jul-09 11:13:59.694 [main] DEBUG nextflow.Session - Session UUID: 0017a2b9-cc29-4c63-a1a9-b913b9283aed
-Jul-09 11:13:59.694 [main] DEBUG nextflow.Session - Run name: soggy_kalam
-Jul-09 11:13:59.695 [main] DEBUG nextflow.Session - Executor pool size: 256
-Jul-09 11:13:59.700 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
-Jul-09 11:13:59.704 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=768; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
-Jul-09 11:13:59.723 [main] DEBUG nextflow.cli.CmdRun - 
+Jul-09 17:46:28.691 [main] DEBUG nextflow.cli.Launcher - $> nextflow -quiet -log /raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/1da154519380e0d2a9bfbc12e80a778d/meta/nextflow.log run /raid/kbajbekov/common_share/github/csp_assembly/main.nf -c /raid/kbajbekov/common_share/github/csp_assembly/nextflow.config -c /raid/kbajbekov/common_share/github/csp_assembly/tests/nextflow.config -params-file /raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/1da154519380e0d2a9bfbc12e80a778d/meta/params.json -ansi-log false -profile test_full -with-trace /raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/1da154519380e0d2a9bfbc12e80a778d/meta/trace.csv -w /raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/1da154519380e0d2a9bfbc12e80a778d/work
+Jul-09 17:46:28.767 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.6
+Jul-09 17:46:28.786 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/PAK-CSPMZ/kbajbekov/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.1,nf-k8s@1.0.0,nf-tower@1.11.4,nf-wave@1.12.1
+Jul-09 17:46:28.814 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jul-09 17:46:28.815 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jul-09 17:46:28.817 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Jul-09 17:46:28.827 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jul-09 17:46:28.846 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /raid/kbajbekov/common_share/github/csp_assembly/nextflow.config
+Jul-09 17:46:28.850 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /raid/kbajbekov/common_share/github/csp_assembly/nextflow.config
+Jul-09 17:46:28.850 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /raid/kbajbekov/common_share/github/csp_assembly/tests/nextflow.config
+Jul-09 17:46:28.851 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /raid/kbajbekov/common_share/github/csp_assembly/nextflow.config
+Jul-09 17:46:28.851 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /raid/kbajbekov/common_share/github/csp_assembly/nextflow.config
+Jul-09 17:46:28.851 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /raid/kbajbekov/common_share/github/csp_assembly/tests/nextflow.config
+Jul-09 17:46:28.876 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/PAK-CSPMZ/kbajbekov/.nextflow/secrets/store.json
+Jul-09 17:46:28.879 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@1869f114] - activable => nextflow.secret.LocalSecretsProvider@1869f114
+Jul-09 17:46:28.897 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `test_full`
+Jul-09 17:46:29.723 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `test_full`
+Jul-09 17:46:29.839 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `test_full`
+Jul-09 17:46:29.847 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [debug, test, apptainer, gpu, wave, docker, shifter, mamba, charliecloud, conda, singularity, arm, test_full, podman]
+Jul-09 17:46:29.874 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Jul-09 17:46:29.886 [main] INFO  nextflow.cli.CmdRun - Launching `/raid/kbajbekov/common_share/github/csp_assembly/main.nf` [serene_wright] DSL2 - revision: baec3eef42
+Jul-09 17:46:29.887 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins declared=[nf-schema@2.3.0]
+Jul-09 17:46:29.887 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jul-09 17:46:29.888 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[nf-schema@2.3.0]
+Jul-09 17:46:29.889 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-schema version: 2.3.0
+Jul-09 17:46:29.897 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-schema@2.3.0' resolved
+Jul-09 17:46:29.897 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-schema@2.3.0'
+Jul-09 17:46:29.902 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-schema@2.3.0
+Jul-09 17:46:29.950 [main] DEBUG nextflow.Session - Session UUID: 3eb8d138-e88b-4028-b62f-8eefda1e7295
+Jul-09 17:46:29.951 [main] DEBUG nextflow.Session - Run name: serene_wright
+Jul-09 17:46:29.951 [main] DEBUG nextflow.Session - Executor pool size: 256
+Jul-09 17:46:29.957 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Jul-09 17:46:29.961 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=768; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jul-09 17:46:29.989 [main] DEBUG nextflow.cli.CmdRun - 
   Version: 25.04.6 build 5954
   Created: 01-07-2025 11:27 UTC (14:27 MSD)
   System: Linux 5.4.0-186-generic
   Runtime: Groovy 4.0.26 on OpenJDK 64-Bit Server VM 21.0.7+6-LTS
   Encoding: UTF-8 (UTF-8)
-  Process: 625051@dgx10.pak-cspmz.ru [127.0.1.1]
-  CPUs: 256 - Mem: 2 TB (82.3 GB) - Swap: 0 (0)
-Jul-09 11:13:59.745 [main] DEBUG nextflow.Session - Work-dir: /raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/1da154519380e0d2a9bfbc12e80a778d/work [ext2/ext3]
-Jul-09 11:13:59.745 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /raid/kbajbekov/common_share/github/csp_assembly/bin
-Jul-09 11:13:59.756 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
-Jul-09 11:13:59.764 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
-Jul-09 11:13:59.791 [main] DEBUG nextflow.Session - Observer factory: ValidationObserverFactory
-Jul-09 11:13:59.827 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
-Jul-09 11:13:59.860 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
-Jul-09 11:13:59.879 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 257; maxThreads: 1000
-Jul-09 11:13:59.969 [main] DEBUG nextflow.Session - Session start
-Jul-09 11:13:59.974 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/1da154519380e0d2a9bfbc12e80a778d/meta/trace.csv
-Jul-09 11:14:00.106 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
-Jul-09 11:14:00.765 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-schema
-Jul-09 11:14:01.072 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryLog:paramsSummaryLog]; plugin Id: nf-schema
-Jul-09 11:14:01.072 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [validateParameters:validateParameters]; plugin Id: nf-schema
-Jul-09 11:14:01.074 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-schema
-Jul-09 11:14:01.075 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [samplesheetToList:samplesheetToList]; plugin Id: nf-schema
-Jul-09 11:14:01.258 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryLog:paramsSummaryLog]; plugin Id: nf-schema
-Jul-09 11:14:01.259 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [validateParameters:validateParameters]; plugin Id: nf-schema
-Jul-09 11:14:01.261 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-schema
-Jul-09 11:14:01.261 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [samplesheetToList:samplesheetToList]; plugin Id: nf-schema
-Jul-09 11:14:01.444 [main] INFO  nextflow.Nextflow - [1mInput/output options[0m
-  [0;34minput                     : [0;32m/raid/kbajbekov/common_share/github/csp_assembly/assets/samplesheet.csv[0m
-  [0;34moutdir                    : [0;32m/tmp/csp_assembly/test/[0m
+  Process: 983639@dgx10.pak-cspmz.ru [127.0.1.1]
+  CPUs: 256 - Mem: 2 TB (80.4 GB) - Swap: 0 (0)
+Jul-09 17:46:30.015 [main] DEBUG nextflow.Session - Work-dir: /raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/1da154519380e0d2a9bfbc12e80a778d/work [ext2/ext3]
+Jul-09 17:46:30.015 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /raid/kbajbekov/common_share/github/csp_assembly/bin
+Jul-09 17:46:30.026 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jul-09 17:46:30.034 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jul-09 17:46:30.052 [main] DEBUG nextflow.Session - Observer factory: ValidationObserverFactory
+Jul-09 17:46:30.076 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Jul-09 17:46:30.097 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Jul-09 17:46:30.105 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 257; maxThreads: 1000
+Jul-09 17:46:30.150 [main] DEBUG nextflow.Session - Session start
+Jul-09 17:46:30.153 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/1da154519380e0d2a9bfbc12e80a778d/meta/trace.csv
+Jul-09 17:46:30.261 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jul-09 17:46:30.815 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-schema
+Jul-09 17:46:31.142 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryLog:paramsSummaryLog]; plugin Id: nf-schema
+Jul-09 17:46:31.143 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [validateParameters:validateParameters]; plugin Id: nf-schema
+Jul-09 17:46:31.145 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-schema
+Jul-09 17:46:31.145 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [samplesheetToList:samplesheetToList]; plugin Id: nf-schema
+Jul-09 17:46:31.264 [SIGINT handler] DEBUG nextflow.Session - Session aborted -- Cause: SIGINT
+Jul-09 17:46:31.419 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryLog:paramsSummaryLog]; plugin Id: nf-schema
+Jul-09 17:46:31.420 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [validateParameters:validateParameters]; plugin Id: nf-schema
+Jul-09 17:46:31.422 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-schema
+Jul-09 17:46:31.423 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [samplesheetToList:samplesheetToList]; plugin Id: nf-schema
+Jul-09 17:46:31.637 [main] INFO  nextflow.Nextflow - [1mInput/output options[0m
+  [0;34minput                       : [0;32m/raid/kbajbekov/common_share/github/csp_assembly/assets/samplesheet.csv[0m
+  [0;34moutdir                      : [0;32m/tmp/csp_assembly/test/[0m
 
 [1mInstitutional config options[0m
-  [0;34mconfig_profile_name       : [0;32mFull test profile[0m
-  [0;34mconfig_profile_description: [0;32mFull test dataset to check pipeline function[0m
+  [0;34mcustom_config_base          : [0;32mnull[0m
+  [0;34mconfig_profile_name         : [0;32mFull test profile[0m
+  [0;34mconfig_profile_description  : [0;32mFull test dataset to check pipeline function[0m
 
 [1mGeneric options[0m
-  [0;34mtrace_report_suffix       : [0;32m2025-07-09_11-13-59[0m
+  [0;34mpipelines_testdata_base_path: [0;32mnull[0m
+  [0;34mtrace_report_suffix         : [0;32m2025-07-09_17-46-29[0m
 
 [1mCore Nextflow options[0m
-  [0;34mrunName                   : [0;32msoggy_kalam[0m
-  [0;34mlaunchDir                 : [0;32m/raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/1da154519380e0d2a9bfbc12e80a778d[0m
-  [0;34mworkDir                   : [0;32m/raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/1da154519380e0d2a9bfbc12e80a778d/work[0m
-  [0;34mprojectDir                : [0;32m/raid/kbajbekov/common_share/github/csp_assembly[0m
-  [0;34muserName                  : [0;32mkbajbekov[0m
-  [0;34mprofile                   : [0;32mtest_full[0m
-  [0;34mconfigFiles               : [0;32m/raid/kbajbekov/common_share/github/csp_assembly/nextflow.config, /raid/kbajbekov/common_share/github/csp_assembly/nextflow.config, /raid/kbajbekov/common_share/github/csp_assembly/tests/nextflow.config[0m
+  [0;34mrunName                     : [0;32mserene_wright[0m
+  [0;34mlaunchDir                   : [0;32m/raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/1da154519380e0d2a9bfbc12e80a778d[0m
+  [0;34mworkDir                     : [0;32m/raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/1da154519380e0d2a9bfbc12e80a778d/work[0m
+  [0;34mprojectDir                  : [0;32m/raid/kbajbekov/common_share/github/csp_assembly[0m
+  [0;34muserName                    : [0;32mkbajbekov[0m
+  [0;34mprofile                     : [0;32mtest_full[0m
+  [0;34mconfigFiles                 : [0;32m/raid/kbajbekov/common_share/github/csp_assembly/nextflow.config, /raid/kbajbekov/common_share/github/csp_assembly/nextflow.config, /raid/kbajbekov/common_share/github/csp_assembly/tests/nextflow.config[0m
 
 !! Only displaying parameters that differ from the pipeline defaults !!
 -[2m----------------------------------------------------[0m-
-Jul-09 11:14:01.445 [main] DEBUG n.validation.ValidationExtension - Starting parameters validation
-Jul-09 11:14:01.545 [main] DEBUG nextflow.validation.SchemaEvaluator - Started validating /raid/kbajbekov/common_share/github/csp_assembly/assets/samplesheet.csv
-Jul-09 11:14:01.610 [main] DEBUG nextflow.validation.SchemaEvaluator - Validation of file '/raid/kbajbekov/common_share/github/csp_assembly/assets/samplesheet.csv' passed!
-Jul-09 11:14:01.611 [main] DEBUG n.validation.ValidationExtension - Finishing parameters validation
-Jul-09 11:14:01.649 [main] WARN  n.validation.SamplesheetConverter - Found the following unidentified headers in /raid/kbajbekov/common_share/github/csp_assembly/assets/samplesheet.csv:
+Jul-09 17:46:31.638 [main] DEBUG n.validation.ValidationExtension - Starting parameters validation
+Jul-09 17:46:31.775 [main] DEBUG nextflow.validation.SchemaEvaluator - Started validating /raid/kbajbekov/common_share/github/csp_assembly/assets/samplesheet.csv
+Jul-09 17:46:31.838 [main] DEBUG nextflow.validation.SchemaEvaluator - Validation of file '/raid/kbajbekov/common_share/github/csp_assembly/assets/samplesheet.csv' passed!
+Jul-09 17:46:31.839 [main] DEBUG n.validation.ValidationExtension - Finishing parameters validation
+Jul-09 17:46:31.878 [main] WARN  n.validation.SamplesheetConverter - Found the following unidentified headers in /raid/kbajbekov/common_share/github/csp_assembly/assets/samplesheet.csv:
 	- reference_fasta
 	- genome_size
 	- reference_gff
-	- ont_fastq
-	- target_coverage_short
-	- target_coverage_ont
-	- seed
 
-Jul-09 11:14:01.770 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name ASSEMBLY:SHORT_READS_PREPROC:RASUSA
-Jul-09 11:14:01.779 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jul-09 11:14:01.780 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jul-09 11:14:01.787 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
-Jul-09 11:14:01.794 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=256; memory=2 TB; capacity=256; pollInterval=100ms; dumpInterval=5m
-Jul-09 11:14:01.796 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
-Jul-09 11:14:01.827 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:SHORT_READS_PREPROC:RASUSA': maxForks=0; fair=false; array=0
-Jul-09 11:14:01.904 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name ASSEMBLY:MULTIQC
-Jul-09 11:14:01.905 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:MULTIQC` matches process ASSEMBLY:MULTIQC
-Jul-09 11:14:01.907 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jul-09 11:14:01.907 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jul-09 11:14:01.908 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:MULTIQC': maxForks=0; fair=false; array=0
-Jul-09 11:14:01.918 [main] DEBUG nextflow.Session - Config process names validation disabled as requested
-Jul-09 11:14:01.922 [main] DEBUG nextflow.Session - Igniting dataflow network (13)
-Jul-09 11:14:01.924 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:SHORT_READS_PREPROC:RASUSA
-Jul-09 11:14:01.931 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:MULTIQC
-Jul-09 11:14:01.925 [Actor Thread 38] ERROR nextflow.extension.OperatorImpl - @unknown
-groovy.lang.MissingMethodException: No signature of method: Script_cd1c5d1780376c52$_runScript_closure3$_closure5$_closure6.call() is applicable for argument types: (ArrayList) values: [[[id:chlamydia_test_0], /common_share/github/csp_assembly/tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz, ...]]
-Possible solutions: any(), any(), any(groovy.lang.Closure), each(groovy.lang.Closure), tap(groovy.lang.Closure), any(groovy.lang.Closure)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:272)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:790)
-	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
-	at org.codehaus.groovy.vmplugin.v8.IndyGuardsFiltersAndSignatures.invokeGroovyObjectInvoker(IndyGuardsFiltersAndSignatures.java:151)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at nextflow.extension.MapOp$_apply_closure1.doCall(MapOp.groovy:56)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:280)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
-	at groovy.lang.Closure.call(Closure.java:433)
-	at groovyx.gpars.dataflow.operator.DataflowOperatorActor.startTask(DataflowOperatorActor.java:120)
-	at groovyx.gpars.dataflow.operator.DataflowOperatorActor.onMessage(DataflowOperatorActor.java:108)
-	at groovyx.gpars.actor.impl.SDAClosure$1.call(SDAClosure.java:43)
-	at groovyx.gpars.actor.AbstractLoopingActor.runEnhancedWithoutRepliesOnMessages(AbstractLoopingActor.java:293)
-	at groovyx.gpars.actor.AbstractLoopingActor.access$400(AbstractLoopingActor.java:30)
-	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:93)
-	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Jul-09 11:14:01.932 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+Jul-09 17:46:32.046 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name ASSEMBLY:MULTIQC
+Jul-09 17:46:32.048 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:MULTIQC` matches process ASSEMBLY:MULTIQC
+Jul-09 17:46:32.055 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-09 17:46:32.055 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-09 17:46:32.060 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Jul-09 17:46:32.067 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=256; memory=2 TB; capacity=256; pollInterval=100ms; dumpInterval=5m
+Jul-09 17:46:32.068 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Jul-09 17:46:32.070 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Jul-09 17:46:32.088 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:MULTIQC': maxForks=0; fair=false; array=0
+Jul-09 17:46:32.113 [main] DEBUG nextflow.Session - Config process names validation disabled as requested
+Jul-09 17:46:32.115 [main] DEBUG nextflow.Session - Igniting dataflow network (11)
+Jul-09 17:46:32.127 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:MULTIQC
+Jul-09 17:46:32.129 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
   Script_4f612cfd8c52e8cd: /raid/kbajbekov/common_share/github/csp_assembly/subworkflows/nf-core/utils_nextflow_pipeline/main.nf
   Script_0fdb2e5f8575be0c: /raid/kbajbekov/common_share/github/csp_assembly/modules/nf-core/multiqc/main.nf
+  Script_74a20c56c4760865: /raid/kbajbekov/common_share/github/csp_assembly/subworkflows/local/short_reads_preproc/main.nf
+  Script_17ccbc5bbe7f860b: /raid/kbajbekov/common_share/github/csp_assembly/workflows/assembly.nf
   Script_215a636da7ab24a2: /raid/kbajbekov/common_share/github/csp_assembly/subworkflows/nf-core/utils_nfschema_plugin/main.nf
+  Script_ae7810d480b7aa5d: /raid/kbajbekov/common_share/github/csp_assembly/subworkflows/local/utils_nfcore_assembly_pipeline/main.nf
   Script_b355087dc9d365d0: /raid/kbajbekov/common_share/github/csp_assembly/modules/nf-core/fastp/main.nf
-  Script_cd1c5d1780376c52: /raid/kbajbekov/common_share/github/csp_assembly/subworkflows/local/utils_nfcore_assembly_pipeline/main.nf
-  Script_3f22cb024d63de44: /raid/kbajbekov/common_share/github/csp_assembly/workflows/assembly.nf
+  Script_7186470009226468: /raid/kbajbekov/common_share/github/csp_assembly/modules/local/rasusa/main.nf
+  Script_d83b28c7ac357b98: /raid/kbajbekov/common_share/github/csp_assembly/main.nf
   Script_5c4e8d4051efa81e: /raid/kbajbekov/common_share/github/csp_assembly/subworkflows/nf-core/utils_nfcore_pipeline/main.nf
-  Script_95a1b2a074ce037f: /raid/kbajbekov/common_share/github/csp_assembly/subworkflows/local/short_reads_preproc/main.nf
-  Script_b37f7b1257c41087: /raid/kbajbekov/common_share/github/csp_assembly/main.nf
-  Script_0321c3d84aae6f02: /raid/kbajbekov/common_share/github/csp_assembly/modules/local/rasusa/main.nf
-Jul-09 11:14:01.932 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
-Jul-09 11:14:01.932 [main] DEBUG nextflow.Session - Session await
-Jul-09 11:14:01.940 [Actor Thread 38] DEBUG nextflow.Session - Session aborted -- Cause: No signature of method: Script_cd1c5d1780376c52$_runScript_closure3$_closure5$_closure6.call() is applicable for argument types: (ArrayList) values: [[[id:chlamydia_test_0], /common_share/github/csp_assembly/tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz, ...]]
-Possible solutions: any(), any(), any(groovy.lang.Closure), each(groovy.lang.Closure), tap(groovy.lang.Closure), any(groovy.lang.Closure)
-Jul-09 11:14:01.957 [Actor Thread 38] DEBUG nextflow.Session - The following nodes are still active:
-[process] ASSEMBLY:SHORT_READS_PREPROC:RASUSA
-  status=ACTIVE
-  port 0: (queue) OPEN  ; channel: -
-  port 1: (cntrl) -     ; channel: $
-
-[process] ASSEMBLY:MULTIQC
-  status=ACTIVE
-  port 0: (value) OPEN  ; channel: multiqc_files
-  port 1: (value) bound ; channel: multiqc_config
-  port 2: (value) bound ; channel: extra_multiqc_config
-  port 3: (value) bound ; channel: multiqc_logo
-  port 4: (value) bound ; channel: replace_names
-  port 5: (value) bound ; channel: sample_names
-  port 6: (cntrl) -     ; channel: $
-
-Jul-09 11:14:01.963 [Actor Thread 38] ERROR nextflow.Nextflow - Pipeline failed. Please refer to troubleshooting docs: https://nf-co.re/docs/usage/troubleshooting
-Jul-09 11:14:01.964 [main] DEBUG nextflow.Session - Session await > all processes finished
-Jul-09 11:14:01.964 [main] DEBUG nextflow.Session - Session await > all barriers passed
-Jul-09 11:14:01.964 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
-Jul-09 11:14:01.969 [main] INFO  nextflow.Nextflow - -[0;35m[csp/assembly][0;31m Pipeline completed with errors[0m-
-Jul-09 11:14:01.973 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
-Jul-09 11:14:01.973 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
-Jul-09 11:14:01.975 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
-Jul-09 11:14:02.000 [Actor Thread 55] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 1; slices: 1; internal sort time: 0.001 s; external sort time: 0.013 s; total time: 0.014 s
-Jul-09 11:14:02.000 [Actor Thread 47] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 1; slices: 1; internal sort time: 0.001 s; external sort time: 0.013 s; total time: 0.014 s
-Jul-09 11:14:02.000 [Actor Thread 56] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 1; slices: 1; internal sort time: 0.001 s; external sort time: 0.013 s; total time: 0.014 s
-Jul-09 11:14:02.003 [Actor Thread 56] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/1da154519380e0d2a9bfbc12e80a778d/work/collect-file/63047108371c61918b3d7b47f7ffc58e
-Jul-09 11:14:02.003 [Actor Thread 47] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/1da154519380e0d2a9bfbc12e80a778d/work/collect-file/1c7e5928bb1e4199593d5b0edebae687
-Jul-09 11:14:02.003 [Actor Thread 55] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/1da154519380e0d2a9bfbc12e80a778d/work/collect-file/ff99c494eb3205586439d93ffcc360d0
-Jul-09 11:14:02.010 [Actor Thread 55] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-243832176194614512
-Jul-09 11:14:02.010 [Actor Thread 47] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-4414942214847362740
-Jul-09 11:14:02.010 [Actor Thread 56] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-1925188164810072473
-Jul-09 11:14:02.435 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
-Jul-09 11:14:02.519 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
-Jul-09 11:14:02.530 [main] INFO  org.pf4j.AbstractPluginManager - Stop plugin 'nf-schema@2.3.0'
-Jul-09 11:14:02.531 [main] DEBUG nextflow.plugin.BasePlugin - Plugin stopped nf-schema
-Jul-09 11:14:02.533 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
+Jul-09 17:46:32.129 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Jul-09 17:46:32.129 [main] DEBUG nextflow.Session - Session await
+Jul-09 17:46:32.129 [main] DEBUG nextflow.Session - Session await > all processes finished
+Jul-09 17:46:32.129 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jul-09 17:46:32.137 [main] INFO  nextflow.Nextflow - -[0;35m[csp/assembly][0;31m Pipeline completed with errors[0m-
+Jul-09 17:46:32.142 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+Jul-09 17:46:32.142 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Jul-09 17:46:32.143 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+Jul-09 17:46:32.217 [Actor Thread 44] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 1; slices: 1; internal sort time: 0.001 s; external sort time: 0.014 s; total time: 0.015 s
+Jul-09 17:46:32.217 [Actor Thread 42] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 1; slices: 1; internal sort time: 0.001 s; external sort time: 0.014 s; total time: 0.015 s
+Jul-09 17:46:32.217 [Actor Thread 37] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 1; slices: 1; internal sort time: 0.001 s; external sort time: 0.014 s; total time: 0.015 s
+Jul-09 17:46:32.221 [Actor Thread 42] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/1da154519380e0d2a9bfbc12e80a778d/work/collect-file/b3c5bd011e8847a2124922fee97aa6ba
+Jul-09 17:46:32.221 [Actor Thread 37] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/1da154519380e0d2a9bfbc12e80a778d/work/collect-file/ff5863e8c9ea6d18b316f1c7d065d300
+Jul-09 17:46:32.221 [Actor Thread 44] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /raid/kbajbekov/common_share/github/csp_assembly/.nf-test/tests/1da154519380e0d2a9bfbc12e80a778d/work/collect-file/0314fbfbcc2b58939124cee5074f50ef
+Jul-09 17:46:32.230 [Actor Thread 42] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-7925885938526950215
+Jul-09 17:46:32.230 [Actor Thread 44] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-10340669825377135686
+Jul-09 17:46:32.230 [Actor Thread 37] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-4722677864938688068
+Jul-09 17:46:32.630 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
+Jul-09 17:46:32.699 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Jul-09 17:46:32.707 [main] INFO  org.pf4j.AbstractPluginManager - Stop plugin 'nf-schema@2.3.0'
+Jul-09 17:46:32.708 [main] DEBUG nextflow.plugin.BasePlugin - Plugin stopped nf-schema
+Jul-09 17:46:32.710 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
