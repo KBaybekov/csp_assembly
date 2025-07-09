@@ -24,6 +24,7 @@ workflow SHORT_READS_PREPROC {
     ch_versions = ch_versions.mix(RASUSA.out.versions)
     
     ch_fqs2trim = branched_samples.no_subsample
-                                    .mix(RASUSA.out.subsampled_fqs)
+                                    .mix(RASUSA.out.subsampled_fqs
+                                                    .map { meta, r1, r2 -> [meta, [r1, r2]] })
 
 }

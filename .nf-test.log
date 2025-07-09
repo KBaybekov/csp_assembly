@@ -1,19 +1,19 @@
-Jul-08 19:29:13.260 [main] INFO  com.askimed.nf.test.App - nf-test 0.9.2
-Jul-08 19:29:13.276 [main] INFO  com.askimed.nf.test.App - Arguments: [test, tests/main.nf.test, --profile, test_full]
-Jul-08 19:29:14.091 [main] INFO  com.askimed.nf.test.App - Nextflow Version: 25.04.6
-Jul-08 19:29:14.092 [main] INFO  com.askimed.nf.test.commands.RunTestsCommand - Load config from file /raid/kbajbekov/common_share/github/csp_assembly/nf-test.config...
-Jul-08 19:29:14.464 [main] WARN  com.askimed.nf.test.nextflow.NextflowScript - Module /raid/kbajbekov/common_share/github/csp_assembly/workflows/assembly.nf: Dependency '/raid/kbajbekov/common_share/github/csp_assembly/workflows/../subworkflows/local/ont_reads_preproc.nf' not found.
-Jul-08 19:29:14.464 [main] WARN  com.askimed.nf.test.nextflow.NextflowScript - Module /raid/kbajbekov/common_share/github/csp_assembly/workflows/assembly.nf: Dependency '/raid/kbajbekov/common_share/github/csp_assembly/workflows/../subworkflows/local/assembling_autocycler_raw_genome.nf' not found.
-Jul-08 19:29:14.464 [main] WARN  com.askimed.nf.test.nextflow.NextflowScript - Module /raid/kbajbekov/common_share/github/csp_assembly/workflows/assembly.nf: Dependency '/raid/kbajbekov/common_share/github/csp_assembly/workflows/../subworkflows/local/hybrid_genome_polishing.nf' not found.
-Jul-08 19:29:14.464 [main] WARN  com.askimed.nf.test.nextflow.NextflowScript - Module /raid/kbajbekov/common_share/github/csp_assembly/workflows/assembly.nf: Dependency '/raid/kbajbekov/common_share/github/csp_assembly/workflows/../subworkflows/local/genome_postprocessing.nf' not found.
-Jul-08 19:29:14.473 [main] INFO  com.askimed.nf.test.lang.dependencies.DependencyResolver - Loaded 42 files from directory /raid/kbajbekov/common_share/github/csp_assembly in 0.043 sec
-Jul-08 19:29:14.474 [main] INFO  com.askimed.nf.test.lang.dependencies.DependencyResolver - Found 1 files containing tests.
-Jul-08 19:29:14.474 [main] DEBUG com.askimed.nf.test.lang.dependencies.DependencyResolver - Found files: [/raid/kbajbekov/common_share/github/csp_assembly/tests/main.nf.test]
-Jul-08 19:29:14.583 [main] INFO  com.askimed.nf.test.commands.RunTestsCommand - Found 1 tests to execute.
-Jul-08 19:29:14.584 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Started test plan
-Jul-08 19:29:14.584 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Running testsuite 'Test Workflow main.nf' from file '/raid/kbajbekov/common_share/github/csp_assembly/tests/main.nf.test'.
-Jul-08 19:29:14.584 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test '1da15451: Should run without failures'. type: com.askimed.nf.test.lang.pipeline.PipelineTest
-Jul-08 19:29:20.720 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Test '1da15451: Should run without failures' finished. status: FAILED
+Jul-09 11:13:55.153 [main] INFO  com.askimed.nf.test.App - nf-test 0.9.2
+Jul-09 11:13:55.168 [main] INFO  com.askimed.nf.test.App - Arguments: [test, tests/main.nf.test, --profile, test_full]
+Jul-09 11:13:55.968 [main] INFO  com.askimed.nf.test.App - Nextflow Version: 25.04.6
+Jul-09 11:13:55.970 [main] INFO  com.askimed.nf.test.commands.RunTestsCommand - Load config from file /raid/kbajbekov/common_share/github/csp_assembly/nf-test.config...
+Jul-09 11:13:56.345 [main] WARN  com.askimed.nf.test.nextflow.NextflowScript - Module /raid/kbajbekov/common_share/github/csp_assembly/workflows/assembly.nf: Dependency '/raid/kbajbekov/common_share/github/csp_assembly/workflows/../subworkflows/local/ont_reads_preproc.nf' not found.
+Jul-09 11:13:56.345 [main] WARN  com.askimed.nf.test.nextflow.NextflowScript - Module /raid/kbajbekov/common_share/github/csp_assembly/workflows/assembly.nf: Dependency '/raid/kbajbekov/common_share/github/csp_assembly/workflows/../subworkflows/local/assembling_autocycler_raw_genome.nf' not found.
+Jul-09 11:13:56.345 [main] WARN  com.askimed.nf.test.nextflow.NextflowScript - Module /raid/kbajbekov/common_share/github/csp_assembly/workflows/assembly.nf: Dependency '/raid/kbajbekov/common_share/github/csp_assembly/workflows/../subworkflows/local/hybrid_genome_polishing.nf' not found.
+Jul-09 11:13:56.345 [main] WARN  com.askimed.nf.test.nextflow.NextflowScript - Module /raid/kbajbekov/common_share/github/csp_assembly/workflows/assembly.nf: Dependency '/raid/kbajbekov/common_share/github/csp_assembly/workflows/../subworkflows/local/genome_postprocessing.nf' not found.
+Jul-09 11:13:56.352 [main] INFO  com.askimed.nf.test.lang.dependencies.DependencyResolver - Loaded 42 files from directory /raid/kbajbekov/common_share/github/csp_assembly in 0.044 sec
+Jul-09 11:13:56.353 [main] INFO  com.askimed.nf.test.lang.dependencies.DependencyResolver - Found 1 files containing tests.
+Jul-09 11:13:56.353 [main] DEBUG com.askimed.nf.test.lang.dependencies.DependencyResolver - Found files: [/raid/kbajbekov/common_share/github/csp_assembly/tests/main.nf.test]
+Jul-09 11:13:56.462 [main] INFO  com.askimed.nf.test.commands.RunTestsCommand - Found 1 tests to execute.
+Jul-09 11:13:56.463 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Started test plan
+Jul-09 11:13:56.463 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Running testsuite 'Test Workflow main.nf' from file '/raid/kbajbekov/common_share/github/csp_assembly/tests/main.nf.test'.
+Jul-09 11:13:56.463 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test '1da15451: Should run without failures'. type: com.askimed.nf.test.lang.pipeline.PipelineTest
+Jul-09 11:14:02.610 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Test '1da15451: Should run without failures' finished. status: FAILED
 org.codehaus.groovy.runtime.powerassert.PowerAssertionError: assert workflow.success
        |        |
        workflow false
@@ -44,5 +44,5 @@ org.codehaus.groovy.runtime.powerassert.PowerAssertionError: assert workflow.suc
 	at picocli.CommandLine.execute(CommandLine.java:2078)
 	at com.askimed.nf.test.App.run(App.java:39)
 	at com.askimed.nf.test.App.main(App.java:46)
-Jul-08 19:29:20.723 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Testsuite 'Test Workflow main.nf' finished. snapshot file: false, skipped tests: false, failed tests: true
-Jul-08 19:29:20.723 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Executed 1 tests. 1 tests failed. Done!
+Jul-09 11:14:02.613 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Testsuite 'Test Workflow main.nf' finished. snapshot file: false, skipped tests: false, failed tests: true
+Jul-09 11:14:02.613 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Executed 1 tests. 1 tests failed. Done!
