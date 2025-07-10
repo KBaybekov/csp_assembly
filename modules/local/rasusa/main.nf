@@ -7,14 +7,14 @@ process RASUSA {
     label 'process_medium'
 
     conda "${moduleDir}/environment.yml"
-    container 'biocontainers/rasusa:2.1.0-1'
+    container 'biocontainers/rasusa:2.1.0--hc1c3326_1'
 
     input:
     tuple val(meta), path(reads), val(coverage), val(genome_size), val(seed)
 
     output:
     path "versions.yml", emit: versions
-    tuple val(meta), path("r1_out.fq"), path("r2_out.fq"), emit: subsampled_fqs
+    tuple val(meta), path("r1_out.fq.gz"), path("r2_out.fq.gz"), emit: subsampled_fqs
 
     when:
     task.ext.when == null || task.ext.when
@@ -31,7 +31,7 @@ process RASUSA {
     -s ${seed} \\
     -c ${coverage} \\
     -g ${genome_size} \\
-    -o r1_out.fq -o r2_out.fq \\
+    -o r1_out.fq.gz -o r2_out.fq.gz \\
     -v \\
     ${args}
 

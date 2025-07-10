@@ -4,6 +4,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
 include { SHORT_READS_PREPROC              } from '../subworkflows/local/short_reads_preproc'
+include { FASTQC                          } from '../modules/nf-core/fastqc/main'
 //include { ONT_READS_PREPROC                } from '../subworkflows/local/ont_reads_preproc'
 //include { ASSEMBLING_AUTOCYCLER_RAW_GENOME } from '../subworkflows/local/assembling_autocycler_raw_genome'
 //include { HYBRID_GENOME_POLISHING          } from '../subworkflows/local/hybrid_genome_polishing'
@@ -25,53 +26,34 @@ workflow ASSEMBLY {
     take:
     ch_samplesheet // channel: samplesheet read in from --input
 
+
     main:
 
     ch_versions = Channel.empty()
     ch_multiqc_files = Channel.empty()
 
     //
-    // Collate and save software versions
-    //
-    softwareVersionsToYAML(ch_versions)
-        .collectFile(
-            storeDir: "${params.outdir}/pipeline_info",
-            name:  'assembly_software_'  + 'mqc_'  + 'versions.yml',
-            sort: true,
-            newLine: true
-        ).set { ch_collated_versions }
-
-    //
     // Generating sample data from input samplesheet
     //
-
-
     ch_samples = ch_samplesheet.map { row ->
     def meta = [:]
-    meta.id = row.id
-    meta.fq_ont = row.fq_ont
-    meta.fq_short_F = row.fq_short_F
-    meta.seed = row.seed
+    meta.id = row.id[0]
+    meta.fq_short_F = row.fq_short_F[0]
+    meta.fq_short_R = row.fq_short_R[0]
+    meta.fq_ont = row.fq_ont[0]
+    meta.reference_fasta = row.reference_fasta[0]
+    meta.reference_gff = row.reference_gff[0]
+    meta.genome_size = row.genome_size[0]
+    meta.target_coverage_short = row.target_coverage_short[0]
+    meta.target_coverage_ont = row.target_coverage_ont[0]
+    meta.seed = row.seed[0]
+    
     if (row.fq_short_R) {
-        meta.fq_short_R = row.fq_short_R
         meta.single_end = false
     } else {
-        meta.single_end = true
+        meta.single_end = false
     }
-    if (row.target_coverage_short) {
-        meta.target_coverage_short = row.target_coverage_short
-    }
-    if (row.genome_size) {
-        meta.genome_size = row.genome_size
-    }
-    if (row.target_coverage_ont) {
-        meta.target_coverage_ont = row.target_coverage_ont
-    }
-    if (row.seed) {
-        meta.seed = row.seed
-    } else {
-        meta.seed = 42
-    }
+    
 
     def short_reads = meta.single_end ? 
         [meta.fq_short_F]:
@@ -82,35 +64,37 @@ workflow ASSEMBLY {
         [meta.fq_ont]
         
     return [meta, short_reads, long_reads]
-}
-/*
-    ch_samples = ch_samplesheet.map { meta ->
-    meta.view()
-    //def new_meta = meta
-    if (meta.fq_short_R) {
-        meta.add("single_end":false)
-    } else {
-        meta.add("single_end":true).flatten()
     }
-    if (!meta.seed) {
-        meta.add("seed":42)
-    }
-    
-
-    def reads = meta.single_end ? 
-        [meta.fq_short_F]:
-        [meta.fq_short_F, meta.fq_short_R]
-        
-    return [meta, reads]
-}
-*/
-
-    ch_samples.view()
-    //ch_samples = Channel.empty()
-
-    //SHORT_READS_PREPROC(ch_samples)
 
 
+    // ch_samples.view()
+
+    // MODULE: Preprocessing: short reads
+    SHORT_READS_PREPROC(ch_samples.map { meta, short_reads, _long_reads ->
+                                            [meta, short_reads] })
+
+    // MODULE: FastQC
+    FASTQC(SHORT_READS_PREPROC.out.preprocessed_short_reads)
+
+    // Collecting tool reports for MultiQC
+    ch_multiqc_files = ch_multiqc_files
+                            .mix(SHORT_READS_PREPROC.out.fastp_json)
+                            .mix(FASTQC.out.zip)
+
+    // Filling ch_versions
+    ch_versions = ch_versions
+                    .mix(SHORT_READS_PREPROC.out.versions)
+                    .mix(FASTQC.out.versions)
+    //
+    // Collate and save software versions
+    //
+    softwareVersionsToYAML(ch_versions)
+        .collectFile(
+            storeDir: "${params.outdir}/pipeline_info",
+            name:  'assembly_software_'  + 'mqc_'  + 'versions.yml',
+            sort: true,
+            newLine: true
+        ).set { ch_collated_versions }
 
     //
     // MODULE: MultiQC

@@ -83,12 +83,13 @@ workflow PIPELINE_INITIALISATION {
             meta, fastqs ->
                 return [ meta, fastqs.flatten() ]
         }
-        .set { ch_samplesheet }
+        
         */
 
-    Channel
+    ch_samplesheet = Channel
         .fromList(samplesheetToList(params.input, "${projectDir}/assets/schema_input.json"))
-        .set { ch_samplesheet }
+
+
     //ch_samplesheet.view()
     emit:
     samplesheet = ch_samplesheet

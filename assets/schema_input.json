@@ -74,7 +74,7 @@
             "seed": {
                 "type": "integer",
                 "pattern": "^[0-9]$",
-                "defult": 42,
+                "default": 42,
                 "errorMessage": "Invalid seed format",
                 "meta": ["seed"]
             }
