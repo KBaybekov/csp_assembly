@@ -169,5 +169,19 @@
         {
             "$ref": "#/$defs/generic_options"
         }
-    ]
+    ],
+    "properties": {
+        "fastp_adapter_fasta": {
+            "type": "string"
+        },
+        "fastp_discard_trimmed_pass": {
+            "type": "boolean"
+        },
+        "fastp_save_trimmed_fail": {
+            "type": "boolean"
+        },
+        "fastp_save_merged": {
+            "type": "boolean"
+        }
+    }
 }

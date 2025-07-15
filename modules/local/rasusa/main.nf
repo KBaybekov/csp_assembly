@@ -14,7 +14,7 @@ process RASUSA {
 
     output:
     path "versions.yml", emit: versions
-    tuple val(meta), path("r1_out.fq.gz"), path("r2_out.fq.gz"), emit: subsampled_fqs
+    tuple val(meta), path("r*_out.fq.gz"), emit: subsampled_fqs
 
     when:
     task.ext.when == null || task.ext.when
@@ -24,14 +24,16 @@ process RASUSA {
     def reads_to_subsample = reads instanceof List ? 
                 "${reads[0]} ${reads[1]}" : 
                 "${reads}" // если single-end
-
+    def out_reads = reads instanceof List ?
+                "r1_out.fq.gz -o r2_out.fq.gz" : 
+                "r1_out.fq.gz" // если single-end
     """
     rasusa reads \\
     ${reads_to_subsample} \\
     -s ${seed} \\
     -c ${coverage} \\
     -g ${genome_size} \\
-    -o r1_out.fq.gz -o r2_out.fq.gz \\
+    -o ${out_reads} \\
     -v \\
     ${args}
 

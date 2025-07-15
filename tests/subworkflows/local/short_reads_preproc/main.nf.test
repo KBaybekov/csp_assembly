@@ -4,24 +4,94 @@ nextflow_workflow {
     script "subworkflows/local/short_reads_preproc/main.nf"
     workflow "SHORT_READS_PREPROC"
 
-    test("Should run without failures") {
+    test("Проверка логики разделения образцов в зависимости от необходимости сабсэмплинга") {
 
         when {
             params {
-                // define parameters here. Example:
-                // outdir = "tests/results"
+                outdir = '/tmp/csp_assembly/tests/subworflows/short_reads_preproc/'
+                adapter_fasta = null
+                discard_trimmed_pass = false
+                save_trimmed_fail = false
+                save_merged = false
+                input = Channel.empty()
+                // Несколько комбинаций данных меты для тестирования поведения
+                // 1. Cабсэмплинг не нужен
+                meta1 = [
+                        id:'sample_no_subsample',
+                        single_end: false,
+                        ]
+                reads1 = [
+                        file('${projectDir}/tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz', checkIfExists: true),
+                        file('${projectDir}/tests/test_data/illumina/GCF_000012125.1_cov_30_2.fq.gz', checkIfExists: true)
+                         ]
+
+                // 2. Cабсэмплинг (есть покрытие и размер генома)
+                meta2 = [
+                        id:'sample_subsample_cov_n_size',
+                        single_end: false,
+                        target_coverage_short: 20,
+                        genome_size: '1.1M',
+                        seed: 44
+                        ]
+                reads2 = [
+                        file('${projectDir}/tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz', checkIfExists: true),
+                        file('${projectDir}/tests/test_data/illumina/GCF_000012125.1_cov_30_2.fq.gz', checkIfExists: true)
+                         ]
+                
+                // 3. Cабсэмплинг не нужен (есть только покрытие)
+                meta3 = [
+                        id:'sample_no_subsample_cov',
+                        single_end: false,
+                        target_coverage_short: 15,
+                        seed: 46
+                        ]
+                reads3 = [
+                        file('${projectDir}/tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz', checkIfExists: true),
+                        file('${projectDir}/tests/test_data/illumina/GCF_000012125.1_cov_30_2.fq.gz', checkIfExists: true)
+                         ]
+                // Создаем входной канал
+                input[0] = [meta1, reads1]
+                input[1] = [meta2, reads2]
+                input[2] = [meta3, reads3]
+                
             }
             workflow {
                 """
-                // define inputs of the workflow here. Example:
-                // input[0] = file("test-file.txt")
+                
+                /*
+                input = Channel.fromList(
+                [[meta1, reads1],
+                [meta2, reads2], 
+                [meta3, reads3]
+                ])
+                */
                 """
             }
         }
 
         then {
             assert workflow.success
-            assert snapshot(workflow.out).match()
+
+            // Обработаны все образцы?
+            assert workflow.out.preprocessed_short_reads.size() == 3
+
+            // Сводка от FASTP создана для всех выходных файлов?
+            assert workflow.out.fastp_json.size() == 3
+
+            // Данные по версиям программ получены?
+            assert workflow.out.versions
+
+            // Структура выходных данных верна?
+            workflow.out.preprocessed_short_reads.view {meta, reads ->
+                assert meta.id
+                assert reads instanceof List
+                assert reads.size() >= 1
+                }
+
+            assert snapshot(
+                workflow.out.preprocessed_short_reads.collect { meta, reads -> meta.id }.sort(),
+                workflow.out.fastp_json.collect { meta, json -> meta.id }.sort())
+            .match()
         }
 
     }

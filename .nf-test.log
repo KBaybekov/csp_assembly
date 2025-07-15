@@ -1,30 +1,29 @@
-Jul-10 11:47:18.801 [main] INFO  com.askimed.nf.test.App - nf-test 0.9.2
-Jul-10 11:47:18.817 [main] INFO  com.askimed.nf.test.App - Arguments: [test, --profile, docker,test_full, --verbose]
-Jul-10 11:47:19.627 [main] INFO  com.askimed.nf.test.App - Nextflow Version: 25.04.6
-Jul-10 11:47:19.628 [main] INFO  com.askimed.nf.test.commands.RunTestsCommand - Load config from file /raid/kbajbekov/common_share/github/csp_assembly/nf-test.config...
-Jul-10 11:47:20.023 [main] WARN  com.askimed.nf.test.nextflow.NextflowScript - Module /raid/kbajbekov/common_share/github/csp_assembly/workflows/assembly.nf: Dependency '/raid/kbajbekov/common_share/github/csp_assembly/workflows/../subworkflows/local/ont_reads_preproc.nf' not found.
-Jul-10 11:47:20.024 [main] WARN  com.askimed.nf.test.nextflow.NextflowScript - Module /raid/kbajbekov/common_share/github/csp_assembly/workflows/assembly.nf: Dependency '/raid/kbajbekov/common_share/github/csp_assembly/workflows/../subworkflows/local/assembling_autocycler_raw_genome.nf' not found.
-Jul-10 11:47:20.024 [main] WARN  com.askimed.nf.test.nextflow.NextflowScript - Module /raid/kbajbekov/common_share/github/csp_assembly/workflows/assembly.nf: Dependency '/raid/kbajbekov/common_share/github/csp_assembly/workflows/../subworkflows/local/hybrid_genome_polishing.nf' not found.
-Jul-10 11:47:20.024 [main] WARN  com.askimed.nf.test.nextflow.NextflowScript - Module /raid/kbajbekov/common_share/github/csp_assembly/workflows/assembly.nf: Dependency '/raid/kbajbekov/common_share/github/csp_assembly/workflows/../subworkflows/local/genome_postprocessing.nf' not found.
-Jul-10 11:47:20.050 [main] INFO  com.askimed.nf.test.lang.dependencies.DependencyResolver - Loaded 43 files from directory /raid/kbajbekov/common_share/github/csp_assembly in 0.064 sec
-Jul-10 11:47:20.051 [main] INFO  com.askimed.nf.test.lang.dependencies.DependencyResolver - Found 4 files containing tests.
-Jul-10 11:47:20.051 [main] DEBUG com.askimed.nf.test.lang.dependencies.DependencyResolver - Found files: [/raid/kbajbekov/common_share/github/csp_assembly/tests/subworkflows/local/short_reads_preproc/main.nf.test, /raid/kbajbekov/common_share/github/csp_assembly/tests/main.nf.test, /raid/kbajbekov/common_share/github/csp_assembly/tests/modules/local/rasusa/main.nf.test, /raid/kbajbekov/common_share/github/csp_assembly/tests/workflows/assembly.nf.test]
-Jul-10 11:47:20.262 [main] INFO  com.askimed.nf.test.commands.RunTestsCommand - Found 4 tests to execute.
-Jul-10 11:47:20.263 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Started test plan
-Jul-10 11:47:20.263 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Running testsuite 'Test pipeline main.nf' from file '/raid/kbajbekov/common_share/github/csp_assembly/tests/main.nf.test'.
-Jul-10 11:47:20.263 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test '1da15451: Should run without failures'. type: com.askimed.nf.test.lang.pipeline.PipelineTest
-Jul-10 11:50:45.901 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Test '1da15451: Should run without failures' finished. status: PASSED
-Jul-10 11:50:45.903 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Testsuite 'Test pipeline main.nf' finished. snapshot file: false, skipped tests: false, failed tests: false
-Jul-10 11:50:45.903 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Running testsuite 'Test Process RASUSA' from file '/raid/kbajbekov/common_share/github/csp_assembly/tests/modules/local/rasusa/main.nf.test'.
-Jul-10 11:50:45.903 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test '481267e2: Should run without failures'. type: com.askimed.nf.test.lang.process.ProcessTest
-Jul-10 11:50:49.092 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Test '481267e2: Should run without failures' finished. status: FAILED
-org.codehaus.groovy.runtime.powerassert.PowerAssertionError: assert process.success
-       |       |
-       RASUSA  false
-	at org.codehaus.groovy.runtime.InvokerHelper.assertFailed(InvokerHelper.java:432)
-	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.assertFailed(ScriptBytecodeAdapter.java:670)
-	at main_nf$_run_closure1$_closure2$_closure4.doCall(main.nf.test:23)
-	at main_nf$_run_closure1$_closure2$_closure4.doCall(main.nf.test)
+Jul-15 12:59:21.654 [main] INFO  com.askimed.nf.test.App - nf-test 0.9.2
+Jul-15 12:59:21.670 [main] INFO  com.askimed.nf.test.App - Arguments: [test, tests/subworkflows/local/short_reads_preproc/main.nf.test]
+Jul-15 12:59:22.472 [main] INFO  com.askimed.nf.test.App - Nextflow Version: 25.04.6
+Jul-15 12:59:22.473 [main] INFO  com.askimed.nf.test.commands.RunTestsCommand - Load config from file /raid/kbajbekov/common_share/github/csp_assembly/nf-test.config...
+Jul-15 12:59:22.855 [main] WARN  com.askimed.nf.test.nextflow.NextflowScript - Module /raid/kbajbekov/common_share/github/csp_assembly/workflows/assembly.nf: Dependency '/raid/kbajbekov/common_share/github/csp_assembly/workflows/../subworkflows/local/ont_reads_preproc.nf' not found.
+Jul-15 12:59:22.856 [main] WARN  com.askimed.nf.test.nextflow.NextflowScript - Module /raid/kbajbekov/common_share/github/csp_assembly/workflows/assembly.nf: Dependency '/raid/kbajbekov/common_share/github/csp_assembly/workflows/../subworkflows/local/assembling_autocycler_raw_genome.nf' not found.
+Jul-15 12:59:22.856 [main] WARN  com.askimed.nf.test.nextflow.NextflowScript - Module /raid/kbajbekov/common_share/github/csp_assembly/workflows/assembly.nf: Dependency '/raid/kbajbekov/common_share/github/csp_assembly/workflows/../subworkflows/local/hybrid_genome_polishing.nf' not found.
+Jul-15 12:59:22.856 [main] WARN  com.askimed.nf.test.nextflow.NextflowScript - Module /raid/kbajbekov/common_share/github/csp_assembly/workflows/assembly.nf: Dependency '/raid/kbajbekov/common_share/github/csp_assembly/workflows/../subworkflows/local/genome_postprocessing.nf' not found.
+Jul-15 12:59:22.883 [main] INFO  com.askimed.nf.test.lang.dependencies.DependencyResolver - Loaded 43 files from directory /raid/kbajbekov/common_share/github/csp_assembly in 0.066 sec
+Jul-15 12:59:22.884 [main] INFO  com.askimed.nf.test.lang.dependencies.DependencyResolver - Found 1 files containing tests.
+Jul-15 12:59:22.884 [main] DEBUG com.askimed.nf.test.lang.dependencies.DependencyResolver - Found files: [/raid/kbajbekov/common_share/github/csp_assembly/tests/subworkflows/local/short_reads_preproc/main.nf.test]
+Jul-15 12:59:23.170 [main] INFO  com.askimed.nf.test.commands.RunTestsCommand - Found 1 tests to execute.
+Jul-15 12:59:23.170 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Started test plan
+Jul-15 12:59:23.170 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Running testsuite 'Test Workflow SHORT_READS_PREPROC' from file '/raid/kbajbekov/common_share/github/csp_assembly/tests/subworkflows/local/short_reads_preproc/main.nf.test'.
+Jul-15 12:59:23.170 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test 'c202e2f6: Проверка логики разделения образцов в зависимости от необходимости сабсэмплинга'. type: com.askimed.nf.test.lang.workflow.WorkflowTest
+Jul-15 12:59:23.177 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Test 'c202e2f6: Проверка логики разделения образцов в зависимости от необходимости сабсэмплинга' finished. status: FAILED
+java.lang.NullPointerException: Cannot invoke method empty() on null object
+	at org.codehaus.groovy.runtime.NullObject.invokeMethod(NullObject.java:110)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:44)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.NullCallSite.call(NullCallSite.java:34)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130)
+	at main_nf$_run_closure1$_closure2$_closure3$_closure5.doCall(main.nf.test:16)
+	at main_nf$_run_closure1$_closure2$_closure3$_closure5.doCall(main.nf.test)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
@@ -33,8 +32,8 @@ org.codehaus.groovy.runtime.powerassert.PowerAssertionError: assert process.succ
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1030)
 	at groovy.lang.Closure.call(Closure.java:427)
 	at groovy.lang.Closure.call(Closure.java:406)
-	at com.askimed.nf.test.lang.TestCode.execute(TestCode.java:16)
-	at com.askimed.nf.test.lang.process.ProcessTest.execute(ProcessTest.java:171)
+	at com.askimed.nf.test.lang.TestContext.evaluateParamsClosure(TestContext.java:76)
+	at com.askimed.nf.test.lang.workflow.WorkflowTest.execute(WorkflowTest.java:120)
 	at com.askimed.nf.test.core.TestExecutionEngine.execute(TestExecutionEngine.java:165)
 	at com.askimed.nf.test.commands.RunTestsCommand.execute(RunTestsCommand.java:298)
 	at com.askimed.nf.test.commands.AbstractCommand.call(AbstractCommand.java:43)
@@ -48,73 +47,5 @@ org.codehaus.groovy.runtime.powerassert.PowerAssertionError: assert process.succ
 	at picocli.CommandLine.execute(CommandLine.java:2078)
 	at com.askimed.nf.test.App.run(App.java:39)
 	at com.askimed.nf.test.App.main(App.java:46)
-Jul-10 11:50:49.094 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Testsuite 'Test Process RASUSA' finished. snapshot file: false, skipped tests: false, failed tests: true
-Jul-10 11:50:49.094 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Running testsuite 'Test Workflow SHORT_READS_PREPROC' from file '/raid/kbajbekov/common_share/github/csp_assembly/tests/subworkflows/local/short_reads_preproc/main.nf.test'.
-Jul-10 11:50:49.095 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test '8d77facc: Should run without failures'. type: com.askimed.nf.test.lang.workflow.WorkflowTest
-Jul-10 11:50:52.662 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Test '8d77facc: Should run without failures' finished. status: FAILED
-org.codehaus.groovy.runtime.powerassert.PowerAssertionError: assert workflow.success
-       |        |
-       workflow false
-	at org.codehaus.groovy.runtime.InvokerHelper.assertFailed(InvokerHelper.java:432)
-	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.assertFailed(ScriptBytecodeAdapter.java:670)
-	at main_nf$_run_closure1$_closure2$_closure4.doCall(main.nf.test:23)
-	at main_nf$_run_closure1$_closure2$_closure4.doCall(main.nf.test)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:274)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1030)
-	at groovy.lang.Closure.call(Closure.java:427)
-	at groovy.lang.Closure.call(Closure.java:406)
-	at com.askimed.nf.test.lang.TestCode.execute(TestCode.java:16)
-	at com.askimed.nf.test.lang.workflow.WorkflowTest.execute(WorkflowTest.java:178)
-	at com.askimed.nf.test.core.TestExecutionEngine.execute(TestExecutionEngine.java:165)
-	at com.askimed.nf.test.commands.RunTestsCommand.execute(RunTestsCommand.java:298)
-	at com.askimed.nf.test.commands.AbstractCommand.call(AbstractCommand.java:43)
-	at com.askimed.nf.test.commands.AbstractCommand.call(AbstractCommand.java:18)
-	at picocli.CommandLine.executeUserObject(CommandLine.java:1953)
-	at picocli.CommandLine.access$1300(CommandLine.java:145)
-	at picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2352)
-	at picocli.CommandLine$RunLast.handle(CommandLine.java:2346)
-	at picocli.CommandLine$RunLast.handle(CommandLine.java:2311)
-	at picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2179)
-	at picocli.CommandLine.execute(CommandLine.java:2078)
-	at com.askimed.nf.test.App.run(App.java:39)
-	at com.askimed.nf.test.App.main(App.java:46)
-Jul-10 11:50:52.663 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Testsuite 'Test Workflow SHORT_READS_PREPROC' finished. snapshot file: false, skipped tests: false, failed tests: true
-Jul-10 11:50:52.663 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Running testsuite 'Test Workflow ASSEMBLY' from file '/raid/kbajbekov/common_share/github/csp_assembly/tests/workflows/assembly.nf.test'.
-Jul-10 11:50:52.663 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test '135b1823: Should run without failures'. type: com.askimed.nf.test.lang.workflow.WorkflowTest
-Jul-10 11:50:56.455 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Test '135b1823: Should run without failures' finished. status: FAILED
-org.codehaus.groovy.runtime.powerassert.PowerAssertionError: assert workflow.success
-       |        |
-       workflow false
-	at org.codehaus.groovy.runtime.InvokerHelper.assertFailed(InvokerHelper.java:432)
-	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.assertFailed(ScriptBytecodeAdapter.java:670)
-	at assembly_nf$_run_closure1$_closure2$_closure4.doCall(assembly.nf.test:23)
-	at assembly_nf$_run_closure1$_closure2$_closure4.doCall(assembly.nf.test)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:274)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1030)
-	at groovy.lang.Closure.call(Closure.java:427)
-	at groovy.lang.Closure.call(Closure.java:406)
-	at com.askimed.nf.test.lang.TestCode.execute(TestCode.java:16)
-	at com.askimed.nf.test.lang.workflow.WorkflowTest.execute(WorkflowTest.java:178)
-	at com.askimed.nf.test.core.TestExecutionEngine.execute(TestExecutionEngine.java:165)
-	at com.askimed.nf.test.commands.RunTestsCommand.execute(RunTestsCommand.java:298)
-	at com.askimed.nf.test.commands.AbstractCommand.call(AbstractCommand.java:43)
-	at com.askimed.nf.test.commands.AbstractCommand.call(AbstractCommand.java:18)
-	at picocli.CommandLine.executeUserObject(CommandLine.java:1953)
-	at picocli.CommandLine.access$1300(CommandLine.java:145)
-	at picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2352)
-	at picocli.CommandLine$RunLast.handle(CommandLine.java:2346)
-	at picocli.CommandLine$RunLast.handle(CommandLine.java:2311)
-	at picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2179)
-	at picocli.CommandLine.execute(CommandLine.java:2078)
-	at com.askimed.nf.test.App.run(App.java:39)
-	at com.askimed.nf.test.App.main(App.java:46)
-Jul-10 11:50:56.456 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Testsuite 'Test Workflow ASSEMBLY' finished. snapshot file: false, skipped tests: false, failed tests: true
-Jul-10 11:50:56.456 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Executed 4 tests. 3 tests failed. Done!
+Jul-15 12:59:23.180 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Testsuite 'Test Workflow SHORT_READS_PREPROC' finished. snapshot file: false, skipped tests: false, failed tests: true
+Jul-15 12:59:23.180 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Executed 1 tests. 1 tests failed. Done!

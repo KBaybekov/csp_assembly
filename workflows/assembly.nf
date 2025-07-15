@@ -48,10 +48,10 @@ workflow ASSEMBLY {
     meta.target_coverage_ont = row.target_coverage_ont[0]
     meta.seed = row.seed[0]
     
-    if (row.fq_short_R) {
+    if (meta.fq_short_R) {
         meta.single_end = false
     } else {
-        meta.single_end = false
+        meta.single_end = true
     }
     
 
@@ -78,8 +78,10 @@ workflow ASSEMBLY {
 
     // Collecting tool reports for MultiQC
     ch_multiqc_files = ch_multiqc_files
-                            .mix(SHORT_READS_PREPROC.out.fastp_json)
-                            .mix(FASTQC.out.zip)
+                            .mix(SHORT_READS_PREPROC.out.fastp_json.map { meta, json ->
+                                                        json })
+                            .mix(FASTQC.out.zip.map { meta, zip ->
+                                                        zip })
 
     // Filling ch_versions
     ch_versions = ch_versions

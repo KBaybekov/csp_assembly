@@ -1,2 +1,5 @@
-sample,reference_fasta,genome_size,reference_gff,fq_short_F,fq_short_R,fq_ont,seed,target_coverage_short,target_coverage_ont
-chlamydia_test_2,/common_share/github/csp_assembly/tests/test_data/GCF_000012125.1_ASM1212v1_genomic.fna,1.1M,/common_share/github/csp_assembly/tests/test_data/GCF_000012125.1.gff,/common_share/github/csp_assembly/tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz,/common_share/github/csp_assembly/tests/test_data/illumina/GCF_000012125.1_cov_30_2.fq.gz,/common_share/github/csp_assembly/tests/test_data/ont/ont_test.fq.gz,44,20,20
+sample,reference_fasta,genome_size,reference_gff,fq_short_F,fq_short_R,fq_ont,target_coverage_short,target_coverage_ont,seed
+test_short_se,,,,/common_share/github/csp_assembly/tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz,,,,,0
+test_short_se_subsample,,1.1M,,/common_share/github/csp_assembly/tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz,,,20,,2
+test_short_pe,,,,/common_share/github/csp_assembly/tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz,/common_share/github/csp_assembly/tests/test_data/illumina/GCF_000012125.1_cov_30_2.fq.gz,,,,14
+test_short_pe_subsample,,1.1M,,/common_share/github/csp_assembly/tests/test_data/illumina/GCF_000012125.1_cov_30_1.fq.gz,/common_share/github/csp_assembly/tests/test_data/illumina/GCF_000012125.1_cov_30_2.fq.gz,,20,,51
